@@ -1,11 +1,11 @@
 import React from "react";
 
-import {DropDownButton} from "./components/DropDownButton";
+import {GamblePage} from "./pages-layout/GamblePage";
 
 function App() {
   return (
     <>
-      <DropDownButton />
+      <GamblePage />
     </>
   );
 }

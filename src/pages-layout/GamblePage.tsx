@@ -5,7 +5,10 @@ import {DropDownButton} from "../components/DropDownButton";
 export const GamblePage = () => {
   return (
     <>
-      <DropDownButton />
+      <div className="temp-page">
+        <DropDownButton teamName="Rogue" />
+        <DropDownButton teamName="MAD Lions" />
+      </div>
     </>
   );
 };

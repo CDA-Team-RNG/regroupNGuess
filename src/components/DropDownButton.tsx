@@ -2,7 +2,7 @@ import React from "react";
 
 import {Button} from "./Button";
 
-export const DropDownButton = () => {
+export const DropDownButton = (props: any) => {
   const dropDownPress = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     e.stopPropagation();
@@ -19,11 +19,15 @@ export const DropDownButton = () => {
 
   return (
     <>
-      <button className="drop-down-button" onClick={(e) => dropDownPress(e)}>
+      <div>
+        <button className="drop-down-button" onClick={(e) => dropDownPress(e)}>
+          {props.teamName}
+        </button>
+
         <section>
           <Button innerHtml="Parier" onClickButton={(e) => gambleClick(e)} />
         </section>
-      </button>
+      </div>
     </>
   );
 };

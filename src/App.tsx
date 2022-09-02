@@ -1,9 +1,11 @@
 import React from "react";
 
+import {DropDownButton} from "./components/DropDownButton";
+
 function App() {
   return (
     <>
-      <p className="Text-test">App</p>
+      <DropDownButton />
     </>
   );
 }

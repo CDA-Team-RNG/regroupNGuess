@@ -15,12 +15,12 @@
   @include button-press-effect(1px 2px 4px $button-comp-box-shadow-color);
 }
 
-.drop-down-button {
-  font-size: 170%;
+.drop-down__button {
+  font-size: 190%;
   font-weight: 900;
 
-  width: 9rem;
-  padding-block: 0.8rem;
+  width: 9.5rem;
+  padding-block: 0.9rem;
 
   color: white;
   background-color: $color-scheme-red-purple;
@@ -30,4 +30,12 @@
 
   // see mixin.scss
   @include button-press-effect(1px 2px 4px $button-comp-box-shadow-color);
+}
+
+.drop-down__panel-container {
+  border: 1px solid black;
+  padding: 2rem;
+}
+
+.drop-down__form {
 }

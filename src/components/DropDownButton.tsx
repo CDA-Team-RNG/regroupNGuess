@@ -20,13 +20,26 @@ export const DropDownButton = (props: any) => {
   return (
     <>
       <div>
-        <button className="drop-down-button" onClick={(e) => dropDownPress(e)}>
+        {/* TEMPS ? */}
+        <button className="drop-down__button" onClick={(e) => dropDownPress(e)}>
           {props.teamName}
         </button>
 
-        <section>
-          <Button innerHtml="Parier" onClickButton={(e) => gambleClick(e)} />
+        <section className="drop-down__panel-container">
+          {/* ---------------------------------------- */}
+          <form className="drop-down__form">
+            <div>
+              <label htmlFor="betValueiD">Mise :</label>
+              <input type="text" name="betValue" id="betValueiD" />
+              <p>
+                Gain : <span>420</span>
+              </p>
+            </div>
+            <Button innerHtml="Parier" onClickButton={(e) => gambleClick(e)} />
+          </form>
+          {/* ---------------------------------------- */}
         </section>
+        {/* TEMPS ? */}
       </div>
     </>
   );

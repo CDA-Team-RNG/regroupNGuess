@@ -7,7 +7,7 @@ export const GamblePage = () => {
     <>
       <div className="temp-page">
         <DropDownButton teamName="Rogue" />
-        <DropDownButton teamName="MAD Lions" />
+        {/* <DropDownButton teamName="MAD Lions" /> */}
       </div>
     </>
   );

@@ -2,15 +2,24 @@ import React from "react";
 
 import {Button} from "../components/Button";
 
-export const DropDownForm = (props: any) => {
+// might need to change gain key type later.
+// string is passed as temp value
+type DropDownForm = {
+  gambleClick: React.MouseEventHandler<HTMLButtonElement>;
+  gain: string;
+};
+
+export const DropDownForm = (props: DropDownForm) => {
   return (
     <form className="drop-down__form">
       <div>
         <div>
-          <label htmlFor="betValueiD">Mise&nbsp;: </label>
+          <label className="drop-down-text" htmlFor="betValueiD">
+            Mise&nbsp;:
+          </label>
           <input type="text" name="betValue" id="betValueiD" />
         </div>
-        <p>
+        <p className="drop-down-text">
           Gain : <span>{props.gain}</span>
         </p>
       </div>

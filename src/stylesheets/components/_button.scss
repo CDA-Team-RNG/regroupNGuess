@@ -17,15 +17,9 @@
   @include button-press-effect(1px 2px 4px $button-comp-box-shadow-color);
 }
 // ------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 
-.temp-dropcontainer {
-  margin-block-start: 2rem;
-  width: 100%;
-
-  // border: 2px solid red;
-}
-
-// BUTTON _________________________________________
+// DROP DOWN BUTTON _________________________________________
 .drop-down__button {
   margin-inline-start: 2.5rem;
 
@@ -33,8 +27,8 @@
   font-weight: 900;
 
   width: 9.5rem;
-  padding-block-start: 0.9rem;
-  padding-block-end: 0.9rem;
+  padding-block-start: 0.75rem;
+  padding-block-end: 0.75rem;
 
   color: white;
   background-color: $color-scheme-red-purple;
@@ -44,66 +38,4 @@
 
   // see mixin.scss
   @include button-press-effect(1px 2px 4px $button-comp-box-shadow-color);
-}
-
-// THE DROP DOWN _________________________________________
-.drop-down__panel-container {
-  margin-inline: auto;
-  background-color: $color-scheme-dark-purple;
-  border: 1px solid $color-scheme-orange;
-  border-radius: 0.8rem;
-  width: min(35rem, 90%);
-}
-
-.drop-down__form {
-  display: flex;
-  justify-content: space-evenly;
-  padding-block: 1.2rem;
-
-  // input & label & gain txt
-  > div {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-
-    width: 50%;
-
-    // input & label
-    > div {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-  }
-
-  label,
-  p {
-    color: white;
-    font-size: 165%;
-    font-weight: 500;
-
-    span {
-      color: $color-scheme-orange;
-    }
-  }
-
-  input {
-    // -webkit-appearance: none;
-    // margin: 0;
-    // -moz-appearance: textfield;
-    font-size: 190%;
-    font-weight: 600;
-    text-align: end;
-
-    border: none;
-    border-radius: 0.5rem;
-
-    padding: 0.2rem;
-
-    width: 60%;
-
-    &:focus {
-      outline: 2px solid $color-scheme-orange;
-    }
-  }
 }

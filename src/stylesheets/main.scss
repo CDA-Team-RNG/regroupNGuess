@@ -13,7 +13,7 @@
 @import "layout/header", "layout/navigation", "layout/grid", "layout/forms", "layout/footer";
 
 // 5. Components
-@import "components/button";
+@import "components/button", "components/dropdown-panel.scss";
 
 // 6. Page-specific styles
 @import "pages/home";

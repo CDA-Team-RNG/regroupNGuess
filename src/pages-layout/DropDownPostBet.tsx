@@ -1,5 +1,5 @@
 import React from "react";
 
 export const DropDownPostBet = () => {
-  return <div>DropDownPostBet</div>;
+  return <section className="drop-down__post-bet"></section>;
 };

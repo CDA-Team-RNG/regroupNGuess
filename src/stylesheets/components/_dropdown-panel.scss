@@ -1,0 +1,81 @@
+// =====================================================================================================
+// ==================================== VARIABLES =====================================================
+// =====================================================================================================
+
+$width-dropdownpanel-container: 35rem;
+$heigth-dropdownpanel-container: 7rem;
+
+// =====================================================================================================
+// =====================================================================================================
+// =====================================================================================================
+
+.drop-down-text {
+  color: white;
+  font-size: 165%;
+  font-weight: 500;
+}
+
+// THE DROP DOWN _________________________________________
+.drop-down__panel-container {
+  margin-block-start: 1.5rem;
+  margin-block-end: 2rem;
+
+  display: grid;
+  align-items: center;
+
+  margin-inline: auto;
+
+  background-color: $color-scheme-dark-purple;
+  border: 1px solid $color-scheme-orange;
+  border-radius: 0.8rem;
+
+  width: min($width-dropdownpanel-container, 90%);
+  height: $heigth-dropdownpanel-container;
+}
+
+.drop-down__form {
+  display: flex;
+  justify-content: space-around;
+
+  // input & label & gain txt
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    width: 50%;
+
+    // input & label
+    > div {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+  }
+
+  span {
+    // !!! % font-size add up with the parent, might need to avoid !!!
+    font-size: 110%;
+    color: $color-scheme-orange;
+  }
+
+  input {
+    // -webkit-appearance: none;
+    // margin: 0;
+    // -moz-appearance: textfield;
+    font-size: 190%;
+    font-weight: 600;
+    text-align: end;
+
+    border: none;
+    border-radius: 0.5rem;
+
+    padding: 0.2rem;
+
+    width: 70%;
+
+    &:focus {
+      outline: 2px solid $color-scheme-orange;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Button} from "./Button";
+import {DropDownForm} from "../pages-layout/DropDownForm";
 
 export const DropDownButton = (props: any) => {
   const dropDownPress = (e: React.MouseEvent<HTMLElement>) => {
@@ -19,7 +19,7 @@ export const DropDownButton = (props: any) => {
 
   return (
     <>
-      <div>
+      <div className="temp-dropcontainer">
         {/* TEMPS ? */}
         <button className="drop-down__button" onClick={(e) => dropDownPress(e)}>
           {props.teamName}
@@ -27,16 +27,7 @@ export const DropDownButton = (props: any) => {
 
         <section className="drop-down__panel-container">
           {/* ---------------------------------------- */}
-          <form className="drop-down__form">
-            <div>
-              <label htmlFor="betValueiD">Mise :</label>
-              <input type="text" name="betValue" id="betValueiD" />
-              <p>
-                Gain : <span>420</span>
-              </p>
-            </div>
-            <Button innerHtml="Parier" onClickButton={(e) => gambleClick(e)} />
-          </form>
+          <DropDownForm gain="420" gambleClick={(e: React.MouseEvent<HTMLElement>) => gambleClick(e)} />
           {/* ---------------------------------------- */}
         </section>
         {/* TEMPS ? */}

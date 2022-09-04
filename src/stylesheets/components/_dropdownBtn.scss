@@ -1,0 +1,106 @@
+//////////////////////
+/* Button dropdown */
+////////////////////
+
+.dropdown {
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+
+.dropdown__btn {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background-color: #504254;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown__btn__item {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        h3 {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+.arrowIcon {
+    height: 25px;
+    filter: invert(100%) sepia(1%) saturate(7465%) hue-rotate(296deg) brightness(106%) contrast(99%);
+}
+
+.gameLogo {
+    max-width: 25px;
+    max-height: 40px;
+}
+
+/////////////////////
+/* Dropdown Items */
+///////////////////
+
+
+.dropdown__items {
+    position: absolute;
+    z-index: 2;
+    top: 100%;  
+    width: 100%;    
+    background-color: #504254;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: growDown 0.2s ease-in;
+    transform-origin: top center;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0);
+    }
+    80% {
+        transform: scaleY(1.1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
+.hidden {
+    display: none;
+    top: 0%;
+}
+
+.category {
+    width: 100%;
+    height: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #424454; 
+    
+    div {
+        width: 85%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+    }
+}

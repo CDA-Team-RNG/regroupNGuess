@@ -8,11 +8,18 @@ $heigth-dropdownpanel-container: 7rem;
 // =====================================================================================================
 // =====================================================================================================
 // =====================================================================================================
-
 .drop-down-text {
   color: white;
   font-size: 165%;
   font-weight: 500;
+}
+
+.drop-down-gain {
+  span {
+    // !!! % font-size add up with the parent, might need to avoid !!!
+    font-size: 110%;
+    color: $color-scheme-orange;
+  }
 }
 
 // =====================================================================================================
@@ -55,12 +62,6 @@ $heigth-dropdownpanel-container: 7rem;
     }
   }
 
-  span {
-    // !!! % font-size add up with the parent, might need to avoid !!!
-    font-size: 110%;
-    color: $color-scheme-orange;
-  }
-
   input {
     // to remove input type number arrow, doing nothing on firefox.
     // -webkit-appearance: none;
@@ -85,3 +86,75 @@ $heigth-dropdownpanel-container: 7rem;
 
 // =====================================================================================================
 // DROP DOWN AFTER BET _________________________________________
+.drop-down__post-bet {
+  display: flex;
+  justify-content: space-around;
+
+  // bet & potential gains
+  section:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem;
+
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    background-color: $color-scheme-dark-blue;
+
+    // bet value
+    p:nth-of-type(1) span {
+      padding-inline: 0.3rem 0.2rem;
+      padding-block: 0.1rem;
+      color: rgb(63, 62, 62);
+      background-color: rgb(163, 163, 163);
+      font-size: 110%;
+    }
+
+    p:nth-of-type(2) {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        padding-inline-start: 0.3rem;
+        padding-inline-end: 0.2rem;
+      }
+    }
+  }
+
+  $size-dropdown-logo: 2.8rem;
+
+  // twitch & youtube
+  section:nth-of-type(2) {
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    background-color: $color-scheme-dark-blue;
+
+    article {
+      margin-block-start: 0.5rem;
+
+      display: flex;
+      justify-content: space-between;
+
+      figure {
+        width: $size-dropdown-logo;
+        height: $size-dropdown-logo;
+
+        padding: 0.5rem;
+        border-radius: 100%;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+          filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.595));
+        }
+      }
+
+      a:nth-of-type(1) figure {
+        background-color: rgb(117, 56, 167);
+      }
+      a:nth-of-type(2) figure {
+        background-color: rgb(167, 56, 56);
+      }
+    }
+  }
+}

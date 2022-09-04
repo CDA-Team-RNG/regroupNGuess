@@ -49,7 +49,7 @@ export const DropDownForm = (props: DropDownForm) => {
           </label>
           <input type="text" name="betValue" id="betValueiD" onChange={getBet} value={bet} />
         </div>
-        <p className="drop-down-text">
+        <p className="drop-down-text drop-down-gain">
           Gain : <span>{props.gain}</span>
         </p>
       </div>

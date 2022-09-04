@@ -1,31 +1,38 @@
 import React, {useState} from "react";
 
-import {DropDownForm} from "../pages-layout/DropDownForm";
+import {DropDownForm} from "./DropDownForm";
 import {DropDownPostBet} from "../pages-layout/DropDownPostBet";
 
 export const DropDownButton = (props: any) => {
   // change dropDown panel display once user have bet.
-  const [isGambled, setIsGambled] = useState(true);
+  const [isGambled, setIsGambled] = useState<boolean>(true);
+  const [betValue, setBetValue] = useState<string>("");
 
-  const dropDownBtnPress = (e: React.MouseEvent<HTMLElement>) => {
+  // ==========================================================
+  const dropDownBtnPress = (e: React.MouseEvent<HTMLElement>): void => {
     e.preventDefault();
     e.stopPropagation();
 
     console.log("drop down press");
   };
 
-  const gambleClick = (e: React.MouseEvent<HTMLElement>) => {
+  // ==========================================================
+  // use gamble button click to switch panel display
+  const gambleClick = (e: React.MouseEvent<HTMLElement>): void => {
     e.preventDefault();
     e.stopPropagation();
 
-    console.log("bet confirmation");
-  };
-
-  // temp change dropdownContainer display
-  const changeDisplay = () => {
     setIsGambled((prevIsGambled) => {
       return !prevIsGambled;
     });
+  };
+
+  // ==========================================================
+  // form submit, get bet value, to be send to "after bet" display
+  const changeBetValue = (betValue: string) => {
+    setBetValue(() => betValue);
+
+    console.log("change bet");
   };
 
   return (
@@ -39,15 +46,19 @@ export const DropDownButton = (props: any) => {
         <section className="drop-down__panel-container">
           {/* ---------------------------------------- */}
           {isGambled ? (
-            <DropDownPostBet />
+            <DropDownPostBet gain="420" bet={betValue} />
           ) : (
-            <DropDownForm gain="420" gambleClick={(e: React.MouseEvent<HTMLElement>) => gambleClick(e)} />
+            <DropDownForm
+              gain="420"
+              gambleClick={(e: React.MouseEvent<HTMLElement>) => gambleClick(e)}
+              sendBet={changeBetValue}
+            />
           )}
 
           {/* ---------------------------------------- */}
         </section>
         {/* TEMPS ? */}
-        <button onClick={changeDisplay}>Change drop down</button>
+        <button onClick={gambleClick}>Change drop down</button>
       </div>
     </>
   );

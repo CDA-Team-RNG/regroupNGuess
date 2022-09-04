@@ -15,7 +15,9 @@ $heigth-dropdownpanel-container: 7rem;
   font-weight: 500;
 }
 
-// THE DROP DOWN _________________________________________
+// =====================================================================================================
+
+// DROP DOWN BET _________________________________________
 .drop-down__panel-container {
   margin-block-start: 1.5rem;
   margin-block-end: 2rem;
@@ -60,6 +62,7 @@ $heigth-dropdownpanel-container: 7rem;
   }
 
   input {
+    // to remove input type number arrow, doing nothing on firefox.
     // -webkit-appearance: none;
     // margin: 0;
     // -moz-appearance: textfield;
@@ -79,3 +82,6 @@ $heigth-dropdownpanel-container: 7rem;
     }
   }
 }
+
+// =====================================================================================================
+// DROP DOWN AFTER BET _________________________________________

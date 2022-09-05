@@ -1,9 +1,12 @@
 import React from "react";
+import { GamblePage } from "./pages-layout/GamblePage";
+import { TeamOdds } from "./pages-layout/TeamOdds";
 
 function App() {
   return (
     <>
-      <p className="Text-test">App</p>
+      {/* <GamblePage /> */}
+      <TeamOdds />
     </>
   );
 }

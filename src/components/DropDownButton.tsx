@@ -47,7 +47,11 @@ export const DropDownButton = (props: any) => {
         </button>
 
         <section
-          className={`${isPanelDropped ? "drop-down__panel-container drop-down__panel-container-open" : "test-scale"}`}>
+          className={`${
+            isPanelDropped
+              ? "drop-down__panel-container drop-down__panel-container-open"
+              : "drop-down__panel-container-close"
+          }`}>
           {/* Switch panel after gambling ___________________ */}
           {isGambled ? (
             <DropDownPostBet gain="420" bet={betValue} panelDisplay={isPanelDropped} />

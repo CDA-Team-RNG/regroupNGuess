@@ -53,7 +53,9 @@ export const DropDownForm = (props: DropDownForm) => {
           Gain : <span>{props.gain}</span>
         </p>
       </div>
-      <Button innerHtml="Parier" onClickButton={formClick} />
+      <div>
+        <Button innerHtml="Parier" onClickButton={formClick} />
+      </div>
     </form>
   );
 };

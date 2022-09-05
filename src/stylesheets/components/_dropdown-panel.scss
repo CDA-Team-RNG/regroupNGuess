@@ -66,7 +66,6 @@ $size-dropdown-logo: 2.8rem;
 
   width: min($width-dropdownpanel-container, 90%);
 
-  transition: height 0.25s;
   animation-name: heightanim-open;
   animation-duration: 0.15s;
 }
@@ -75,13 +74,12 @@ $size-dropdown-logo: 2.8rem;
   height: $heigth-dropdownpanel-container;
 }
 
-// =====================================================================================================
-
-.test-scale {
-  height: 0;
-  // animation-name: heightanim-close;
-  // animation-duration: 0.9s;
+.drop-down__panel-container-close {
+  animation-name: heightanim-close;
+  animation-duration: 0.9s;
 }
+
+// =====================================================================================================
 
 .changes-scale {
   // transform: scaleY(0);
@@ -99,43 +97,52 @@ $size-dropdown-logo: 2.8rem;
   display: flex;
   justify-content: space-around;
 
+  // set 100% for the entier form
+  width: 100%;
+
   @include transform();
 
   // input & label & gain txt
-  > div {
+  div:nth-of-type(1) {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
 
+    // as form is 100% can set a size for div(1) with %
     width: 50%;
 
     // input & label
     > div {
       display: flex;
-      align-items: center;
+      flex-direction: row;
       gap: 0.8rem;
+
+      //for the div(1) width to work need to 100%
+      width: 100%;
+
+      input {
+        font-size: 190%;
+        font-weight: 600;
+        text-align: end;
+
+        border: none;
+        border-radius: 0.5rem;
+
+        padding: 0.2rem;
+
+        //for the div(1) width to work need to 100%
+        width: 100%;
+
+        &:focus {
+          outline: 2px solid $color-scheme-orange;
+        }
+      }
     }
   }
 
-  input {
-    // to remove input type number arrow, doing nothing on firefox.
-    // -webkit-appearance: none;
-    // margin: 0;
-    // -moz-appearance: textfield;
-    font-size: 190%;
-    font-weight: 600;
-    text-align: end;
-
-    border: none;
-    border-radius: 0.5rem;
-
-    padding: 0.2rem;
-
-    width: 70%;
-
-    &:focus {
-      outline: 2px solid $color-scheme-orange;
-    }
+  div:nth-of-type(2) {
+    display: grid;
+    align-items: center;
   }
 }
 

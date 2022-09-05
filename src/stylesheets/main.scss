@@ -27,13 +27,15 @@
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/match';
 
 // 6. Page-specific styles
 @import
   'pages/home',
   'pages/gamble',
-  'pages/teamOdds';
+  'pages/teamOdds',
+  'pages/matchTeam';
 
 // 7. Themes
 @import

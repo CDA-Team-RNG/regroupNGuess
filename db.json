@@ -1,0 +1,14 @@
+{
+    "teams": [
+        {
+            "name": "MAD",
+            "logo": "./assets/logoMad.png",
+            "odds": 1.56
+        },
+        {
+            "name": "ROGUE",
+            "logo": "./assets/logoRogue.png",
+            "odds": 2.01
+        }
+    ]
+}

@@ -1,9 +1,16 @@
+import { type } from 'os'
 import React from 'react'
 
-export const TeamOdds = () => {
+export type TeamOddsProps = {
+  odds: number
+}
+
+export const TeamOdds = (props: TeamOddsProps) => {
   return (
     <>
-    <button className='odds'>1.56</button>
+    <div className='teamOdds'>
+    <button className='odds'> {props.odds} </button>
+    </div>
     </>
   )
 }

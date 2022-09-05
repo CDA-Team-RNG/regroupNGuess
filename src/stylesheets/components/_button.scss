@@ -19,8 +19,16 @@
 // ------------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------------
 
+.dropdown__arrow {
+  width: 0.7rem;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 // DROP DOWN BUTTON _________________________________________
-.drop-down__button {
+.drop-down__button-off {
   margin-inline-start: 2.5rem;
 
   font-size: 190%;
@@ -38,4 +46,45 @@
 
   // see mixin.scss
   @include button-press-effect(1px 2px 4px $button-comp-box-shadow-color);
+}
+
+.drop-down__button-on {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  position: relative;
+
+  margin-inline-start: 2.5rem;
+
+  font-size: 190%;
+  font-weight: 900;
+
+  width: 9.5rem;
+  padding-block-start: 0.75rem;
+  padding-block-end: 2rem;
+
+  color: white;
+  background-color: $color-scheme-dark-purple;
+
+  border-radius: 0.8rem 0.8rem 0 0;
+  border-top: 1px solid $color-scheme-orange;
+  border-left: 1px solid $color-scheme-orange;
+  border-right: 1px solid $color-scheme-orange;
+  border-bottom: none;
+
+  // box-shadow: 1px 4px 4px $button-comp-box-shadow-color;
+
+  // see mixin.scss
+  @include button-press-effect(1px 2px 4px $button-comp-box-shadow-color);
+
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: $color-scheme-dark-purple;
+    width: 100%;
+    height: 10px;
+    bottom: -5%;
+  }
 }

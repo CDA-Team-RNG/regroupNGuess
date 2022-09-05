@@ -3,9 +3,12 @@ import React, {useState} from "react";
 import {DropDownForm} from "./DropDownForm";
 import {DropDownPostBet} from "../pages-layout/DropDownPostBet";
 
+import arrowDown from "../assets/play-white.png";
+
 export const DropDownButton = (props: any) => {
+  const [isPanelDropped, setisPanelDropped] = useState<boolean>(false);
   // change dropDown panel display once user have bet.
-  const [isGambled, setIsGambled] = useState<boolean>(true);
+  const [isGambled, setIsGambled] = useState<boolean>(false);
   const [betValue, setBetValue] = useState<string>("");
 
   // ==========================================================
@@ -13,18 +16,7 @@ export const DropDownButton = (props: any) => {
     e.preventDefault();
     e.stopPropagation();
 
-    console.log("drop down press");
-  };
-
-  // ==========================================================
-  // use gamble button click to switch panel display
-  const gambleClick = (e: React.MouseEvent<HTMLElement>): void => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    setIsGambled((prevIsGambled) => {
-      return !prevIsGambled;
-    });
+    setisPanelDropped((prev) => !prev);
   };
 
   // ==========================================================
@@ -33,32 +25,38 @@ export const DropDownButton = (props: any) => {
     setBetValue(() => betValue);
 
     console.log("change bet");
+
+    setIsGambled((prevIsGambled) => !prevIsGambled);
   };
 
   return (
     <>
       <div className="temp-dropcontainer">
         {/* TEMPS ? */}
-        <button className="drop-down__button" onClick={(e) => dropDownBtnPress(e)}>
+        <button
+          /* switch class ___________________________________ */
+          className={`${isPanelDropped ? "drop-down__button-on" : "drop-down__button-off"}`}
+          onClick={(e) => dropDownBtnPress(e)}>
           {props.teamName}
+          {/* conditional arrow rendering __________________ */}
+          {isPanelDropped && (
+            <figure className="dropdown__arrow">
+              <img src={arrowDown} alt="arrow down" />
+            </figure>
+          )}
         </button>
 
-        <section className="drop-down__panel-container">
-          {/* ---------------------------------------- */}
+        <section
+          className={`${isPanelDropped ? "drop-down__panel-container drop-down__panel-container-open" : "test-scale"}`}>
+          {/* Switch panel after gambling ___________________ */}
           {isGambled ? (
-            <DropDownPostBet gain="420" bet={betValue} />
+            <DropDownPostBet gain="420" bet={betValue} panelDisplay={isPanelDropped} />
           ) : (
-            <DropDownForm
-              gain="420"
-              gambleClick={(e: React.MouseEvent<HTMLElement>) => gambleClick(e)}
-              sendBet={changeBetValue}
-            />
+            <DropDownForm gain="420" panelDisplay={isPanelDropped} sendBet={changeBetValue} />
           )}
 
           {/* ---------------------------------------- */}
         </section>
-        {/* TEMPS ? */}
-        <button onClick={gambleClick}>Change drop down</button>
       </div>
     </>
   );

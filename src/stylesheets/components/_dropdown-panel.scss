@@ -5,6 +5,8 @@
 $width-dropdownpanel-container: 35rem;
 $heigth-dropdownpanel-container: 7rem;
 
+$size-dropdown-logo: 2.8rem;
+
 // =====================================================================================================
 // =====================================================================================================
 // =====================================================================================================
@@ -23,10 +25,32 @@ $heigth-dropdownpanel-container: 7rem;
 }
 
 // =====================================================================================================
+@keyframes heightanim-open {
+  from {
+    height: 0;
+  }
+  95% {
+    height: 7.7rem;
+  }
+  to {
+    height: $heigth-dropdownpanel-container;
+  }
+}
+
+@keyframes heightanim-close {
+  from {
+    height: $heigth-dropdownpanel-container;
+  }
+  95% {
+    height: -0.5rem;
+  }
+  to {
+    height: 0;
+  }
+}
 
 // DROP DOWN BET _________________________________________
 .drop-down__panel-container {
-  margin-block-start: 1.5rem;
   margin-block-end: 2rem;
 
   display: grid;
@@ -38,13 +62,44 @@ $heigth-dropdownpanel-container: 7rem;
   border: 1px solid $color-scheme-orange;
   border-radius: 0.8rem;
 
+  box-shadow: 1px 4px 4px $button-comp-box-shadow-color;
+
   width: min($width-dropdownpanel-container, 90%);
+
+  transition: height 0.25s;
+  animation-name: heightanim-open;
+  animation-duration: 0.15s;
+}
+
+.drop-down__panel-container-open {
   height: $heigth-dropdownpanel-container;
 }
+
+// =====================================================================================================
+
+.test-scale {
+  height: 0;
+  // animation-name: heightanim-close;
+  // animation-duration: 0.9s;
+}
+
+.changes-scale {
+  // transform: scaleY(0);
+  opacity: 0;
+}
+
+@mixin transform {
+  opacity: 1;
+  transition: opacity 0.55s ease 0.2s;
+}
+
+// =====================================================================================================
 
 .drop-down__form {
   display: flex;
   justify-content: space-around;
+
+  @include transform();
 
   // input & label & gain txt
   > div {
@@ -90,6 +145,8 @@ $heigth-dropdownpanel-container: 7rem;
   display: flex;
   justify-content: space-around;
 
+  @include transform();
+
   // bet & potential gains
   section:nth-of-type(1) {
     display: flex;
@@ -97,13 +154,14 @@ $heigth-dropdownpanel-container: 7rem;
     justify-content: center;
     gap: 0.8rem;
 
-    padding: 0.7rem;
+    padding-block: 0.4rem;
+    padding-inline: 0.8rem;
     border-radius: 0.5rem;
     background-color: $color-scheme-dark-blue;
 
     // bet value
     p:nth-of-type(1) span {
-      padding-inline: 0.3rem 0.2rem;
+      padding-inline: 0.4rem 0.2rem;
       padding-block: 0.1rem;
       color: rgb(63, 62, 62);
       background-color: rgb(163, 163, 163);
@@ -121,11 +179,10 @@ $heigth-dropdownpanel-container: 7rem;
     }
   }
 
-  $size-dropdown-logo: 2.8rem;
-
   // twitch & youtube
   section:nth-of-type(2) {
-    padding: 0.7rem;
+    padding-block: 0.3rem;
+    padding-inline: 0.8rem;
     border-radius: 0.5rem;
     background-color: $color-scheme-dark-blue;
 

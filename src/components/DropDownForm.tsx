@@ -5,7 +5,7 @@ import {Button} from "./Button";
 // might need to change gain key type later.
 type DropDownForm = {
   sendBet: Function;
-  gambleClick: Function;
+  panelDisplay: boolean;
   gain: string;
 };
 
@@ -32,7 +32,7 @@ export const DropDownForm = (props: DropDownForm) => {
     e.stopPropagation();
 
     // could be removed later, for now use it to get the button press.
-    props.gambleClick(e);
+    // props.gambleClick(e);
 
     // form onSubmit do not work ??
     props.sendBet(bet);
@@ -41,7 +41,7 @@ export const DropDownForm = (props: DropDownForm) => {
   // ==================================================================
   // ==================================================================
   return (
-    <form className="drop-down__form">
+    <form className={`${props.panelDisplay ? "drop-down__form" : "changes-scale"}`}>
       <div>
         <div>
           <label className="drop-down-text" htmlFor="betValueiD">

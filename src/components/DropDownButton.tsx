@@ -22,10 +22,10 @@ export const DropDownButton = (props: any) => {
   // ==========================================================
   // form submit, get bet value, to be send to "after bet" display
   const changeBetValue = (betValue: string) => {
+    // set bet points ( from input )
     setBetValue(() => betValue);
 
-    console.log("change bet");
-
+    // if "parier" button is pressed / form sumbit
     setIsGambled((prevIsGambled) => !prevIsGambled);
   };
 
@@ -35,7 +35,7 @@ export const DropDownButton = (props: any) => {
         {/* TEMPS ? */}
         <button
           /* switch class ___________________________________ */
-          className={`${isPanelDropped ? "drop-down__button-on" : "drop-down__button-off"}`}
+          className={`drop-down__button-general ${isPanelDropped ? "drop-down__button-on" : "drop-down__button-off"}`}
           onClick={(e) => dropDownBtnPress(e)}>
           {props.teamName}
           {/* conditional arrow rendering __________________ */}
@@ -47,10 +47,8 @@ export const DropDownButton = (props: any) => {
         </button>
 
         <section
-          className={`${
-            isPanelDropped
-              ? "drop-down__panel-container drop-down__panel-container-open"
-              : "drop-down__panel-container-close"
+          className={`drop-down__panel-container ${
+            isPanelDropped ? "drop-down__panel-container-open" : "drop-down__panel-container-close"
           }`}>
           {/* Switch panel after gambling ___________________ */}
           {isGambled ? (

@@ -9,7 +9,7 @@ $size-dropdown-logo: 2.8rem;
 
 // =====================================================================================================
 // =====================================================================================================
-// =====================================================================================================
+// GENERAL STYLE :
 .drop-down-text {
   color: white;
   font-size: 165%;
@@ -24,13 +24,13 @@ $size-dropdown-logo: 2.8rem;
   }
 }
 
-// =====================================================================================================
+//  ANIMATIONS ==========================================================================================
 @keyframes heightanim-open {
   from {
-    height: 0;
+    height: 0rem;
   }
   95% {
-    height: 7.7rem;
+    height: 8.5rem;
   }
   to {
     height: $heigth-dropdownpanel-container;
@@ -40,16 +40,40 @@ $size-dropdown-logo: 2.8rem;
 @keyframes heightanim-close {
   from {
     height: $heigth-dropdownpanel-container;
-  }
-  95% {
-    height: -0.5rem;
+    opacity: 1;
   }
   to {
-    height: 0;
+    height: 0rem;
+    opacity: 0;
   }
 }
 
-// DROP DOWN BET _________________________________________
+.drop-down__panel-container-open {
+  //height: $heigth-dropdownpanel-container;
+  animation: 0.15s ease-out heightanim-open;
+  height: $heigth-dropdownpanel-container;
+}
+
+.drop-down__panel-container-close {
+  animation: 0.15s ease-in heightanim-close;
+  height: 0;
+  opacity: 0;
+}
+
+// dropdown panel content
+.changes-opacity-off {
+  // transform: scaleY(0);
+  transition: opacity 0.05s ease;
+  opacity: 0;
+}
+
+.changes-opacity-on {
+  // transform: scaleY(0);
+  transition: opacity 0.25s ease 0.2s;
+  opacity: 1;
+}
+
+// DROP DOWN GENERAL CONTAINER _______________________________________________________________________
 .drop-down__panel-container {
   margin-block-end: 2rem;
 
@@ -65,42 +89,16 @@ $size-dropdown-logo: 2.8rem;
   box-shadow: 1px 4px 4px $button-comp-box-shadow-color;
 
   width: min($width-dropdownpanel-container, 90%);
-
-  animation-name: heightanim-open;
-  animation-duration: 0.15s;
+  //
 }
 
-.drop-down__panel-container-open {
-  height: $heigth-dropdownpanel-container;
-}
-
-.drop-down__panel-container-close {
-  animation-name: heightanim-close;
-  animation-duration: 0.9s;
-}
-
-// =====================================================================================================
-
-.changes-scale {
-  // transform: scaleY(0);
-  opacity: 0;
-}
-
-@mixin transform {
-  opacity: 1;
-  transition: opacity 0.55s ease 0.2s;
-}
-
-// =====================================================================================================
-
+// DROP DOWN FORM  __________________________________________________________________________________
 .drop-down__form {
   display: flex;
   justify-content: space-around;
 
   // set 100% for the entier form
   width: 100%;
-
-  @include transform();
 
   // input & label & gain txt
   div:nth-of-type(1) {
@@ -146,13 +144,10 @@ $size-dropdown-logo: 2.8rem;
   }
 }
 
-// =====================================================================================================
-// DROP DOWN AFTER BET _________________________________________
+// DROP DOWN AFTER BET __________________________________________________________________________________
 .drop-down__post-bet {
   display: flex;
   justify-content: space-around;
-
-  @include transform();
 
   // bet & potential gains
   section:nth-of-type(1) {

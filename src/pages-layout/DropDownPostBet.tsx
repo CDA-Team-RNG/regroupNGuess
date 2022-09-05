@@ -11,7 +11,7 @@ type PostBet = {
 
 export const DropDownPostBet = (props: PostBet) => {
   return (
-    <section className={`${props.panelDisplay ? "drop-down__post-bet" : "changes-scale"}`}>
+    <section className={`drop-down__post-bet ${props.panelDisplay ? "changes-opacity-on" : "changes-opacity-off"}`}>
       <section>
         <p className="drop-down-text">
           Mise&nbsp;: <span> {props.bet === "" ? 0 : props.bet}</span>

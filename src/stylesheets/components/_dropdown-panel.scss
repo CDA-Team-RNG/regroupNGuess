@@ -55,32 +55,38 @@ $size-dropdown-logo: 2.8rem;
 }
 
 .drop-down__panel-container-close {
-  animation: 0.15s ease-in heightanim-close;
+  animation: 0.15s ease heightanim-close;
   height: 0;
   opacity: 0;
 }
 
 // dropdown panel content
-.changes-opacity-off {
+.content-opacity-off {
   // transform: scaleY(0);
   transition: opacity 0.05s ease;
   opacity: 0;
 }
 
-.changes-opacity-on {
+.content-opacity-on {
   // transform: scaleY(0);
   transition: opacity 0.25s ease 0.2s;
   opacity: 1;
 }
 
+// DROP DOWN PANEL ==========================================================================================
+
+// DROP DOWN MAIN CONTAINER _______________________________________________________________________
+.drop-down__main-container {
+  position: relative;
+  isolation: isolate;
+}
+
 // DROP DOWN GENERAL CONTAINER _______________________________________________________________________
 .drop-down__panel-container {
-  margin-block-end: 2rem;
+  position: absolute;
 
   display: grid;
   align-items: center;
-
-  margin-inline: auto;
 
   background-color: $color-scheme-dark-purple;
   border: 1px solid $color-scheme-orange;
@@ -88,8 +94,19 @@ $size-dropdown-logo: 2.8rem;
 
   box-shadow: 1px 4px 4px $button-comp-box-shadow-color;
 
-  width: min($width-dropdownpanel-container, 90%);
-  //
+  // width: min($width-dropdownpanel-container, 90%);
+
+  width: 80vw;
+}
+
+.panel-left {
+  left: -10%;
+  z-index: 1;
+}
+
+.panel-right {
+  right: -10%;
+  z-index: 1;
 }
 
 // DROP DOWN FORM  __________________________________________________________________________________

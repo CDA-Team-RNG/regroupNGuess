@@ -41,7 +41,7 @@ export const DropDownForm = (props: DropDownForm) => {
   // ==================================================================
   // ==================================================================
   return (
-    <form className={`drop-down__form ${props.panelDisplay ? "changes-opacity-on" : "changes-opacity-off"}`}>
+    <form className={`drop-down__form ${props.panelDisplay ? "content-opacity-on" : "content-opacity-off"}`}>
       <div>
         <div>
           <label className="drop-down-text" htmlFor="betValueiD">

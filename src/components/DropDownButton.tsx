@@ -30,36 +30,36 @@ export const DropDownButton = (props: any) => {
   };
 
   return (
-    <>
-      <div className="temp-dropcontainer">
-        {/* TEMPS ? */}
-        <button
-          /* switch class ___________________________________ */
-          className={`drop-down__button-general ${isPanelDropped ? "drop-down__button-on" : "drop-down__button-off"}`}
-          onClick={(e) => dropDownBtnPress(e)}>
-          {props.teamName}
-          {/* conditional arrow rendering __________________ */}
-          {isPanelDropped && (
-            <figure className="dropdown__arrow">
-              <img src={arrowDown} alt="arrow down" />
-            </figure>
-          )}
-        </button>
+    <section className="drop-down__main-container">
+      {/* TEMPS ? */}
+      <button
+        /* switch class ___________________________________ */
+        className={`drop-down__button-general ${isPanelDropped ? "drop-down__button-on" : "drop-down__button-off"}`}
+        onClick={(e) => dropDownBtnPress(e)}>
+        {props.teamName}
+        {/* conditional arrow rendering __________________ */}
+        {isPanelDropped && (
+          <figure className="dropdown__arrow">
+            <img src={arrowDown} alt="arrow down" />
+          </figure>
+        )}
+      </button>
 
-        <section
-          className={`drop-down__panel-container ${
-            isPanelDropped ? "drop-down__panel-container-open" : "drop-down__panel-container-close"
-          }`}>
-          {/* Switch panel after gambling ___________________ */}
-          {isGambled ? (
-            <DropDownPostBet gain="420" bet={betValue} panelDisplay={isPanelDropped} />
-          ) : (
-            <DropDownForm gain="420" panelDisplay={isPanelDropped} sendBet={changeBetValue} />
-          )}
+      <section
+        className={`drop-down__panel-container ${
+          isPanelDropped ? "drop-down__panel-container-open" : "drop-down__panel-container-close"
+        }
+        ${props.panelPos === 0 ? "panel-left" : "panel-right"}
+        `}>
+        {/* Switch panel after gambling ___________________ */}
+        {isGambled ? (
+          <DropDownPostBet gain="420" bet={betValue} panelDisplay={isPanelDropped} />
+        ) : (
+          <DropDownForm gain="420" panelDisplay={isPanelDropped} sendBet={changeBetValue} />
+        )}
 
-          {/* ---------------------------------------- */}
-        </section>
-      </div>
-    </>
+        {/* ---------------------------------------- */}
+      </section>
+    </section>
   );
 };

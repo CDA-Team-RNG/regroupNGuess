@@ -6,11 +6,22 @@ export type TeamOddsProps = {
 }
 
 export const TeamOdds = (props: TeamOddsProps) => {
-  return (
-    <>
-    <div className='teamOdds'>
-    <button className='odds'> {props.odds} </button>
-    </div>
-    </>
-  )
+  if (props.odds >= 2) {
+    return (
+      <>
+      <div className='teamOdds'>
+      <button className='odds2'> {props.odds} </button>
+      </div>
+      </>
+    )
+  }
+  else {
+      return (
+        <>
+        <div className='teamOdds'>
+        <button className='odds'> {props.odds} </button>
+        </div>
+        </>
+      )
+  }
 }

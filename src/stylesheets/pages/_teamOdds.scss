@@ -1,15 +1,24 @@
 .odds{
     color: white;
-    background: linear-gradient(red , 80%, rgb(77, 73, 73));
+    background: linear-gradient(rgb(237, 50, 50) , 80%, rgb(77, 73, 73));
     border: none;
-    border-radius: 5px;
-    width: 50px;
-    height: 30px;
-    font-size: 15px;
+    border-radius: 0.313rem;
+    width: 3.125rem;
+    height: 1.875rem;
+    font-size: 0.938rem;
     font-weight: bold;
 }
 
-.teamOdds{
-padding: 20px;
+.odds2{
+    color: white;
+    background: linear-gradient(rgb(33, 130, 218) , 80%, rgb(77, 73, 73));
+    border: none;
+    border-radius: 0.313rem;
+    width: 3.125rem;
+    height: 1.875rem;
+    font-size: 0.938rem;
+    font-weight: bold;  
 }
+
+
 

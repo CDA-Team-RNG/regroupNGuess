@@ -4,5 +4,6 @@ export type TeamsType =
     {
         name: string,
         logo: string,
-        odds: number
+        odds: number,
+        id: number
     }

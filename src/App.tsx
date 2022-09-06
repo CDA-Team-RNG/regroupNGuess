@@ -7,7 +7,7 @@ import { TeamOdds } from "./pages-layout/TeamOdds";
 function App() {
   return (
     <>
-      <Match />
+      <GamblePage />
     </>
   );
 }

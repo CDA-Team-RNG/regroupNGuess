@@ -1,12 +1,58 @@
 .matchTeamPName{
     color: white;
-    font-size: 24px;
+    font-size: 1.25rem;
     font-weight: bold;
-    text-decoration: underline;
-    text-decoration-color: red;
+    line-height: 0.625rem;
 }
 
-.imgVs{
-    width: 100px;
-    height: 100px;
+.matchTeamLogo{
+    width: 3.125rem;
+    // height: 50px;
+    filter: drop-shadow(0.313rem 0.313rem 0.063rem rgba(0, 0, 0, 0.372));
+}
+
+.matcheteamContainer{
+    display: flex;
+    margin-top: 0.625rem;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.matcheteamContainer2{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 0.625rem;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.matchTeamNameOdds{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.matchTeamNameOdds2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.matchTeamPName2{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 10px;
+}
+
+.matchTeamLine{
+    width: 35px;
+  border: 1px inset rgb(237, 50, 50);
+}
+
+.matchTeamLine2{
+    width: 35px;
+  border: 1px inset rgb(33, 130, 218);
 }

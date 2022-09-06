@@ -29,27 +29,33 @@ export const DropDownForm = (props: DropDownForm) => {
   // ==========================================================
   // FORM SUBMIT
   const formClick = (e: React.MouseEvent<HTMLElement>) => {
-    e.preventDefault();
+    // no need here of the click for anything else than form submit
+    // e.preventDefault();
+    // prevent onSubmit to work
     e.stopPropagation();
+  };
 
-    // could be removed later, for now use it to get the button press.
-    // props.gambleClick(e);
+  const submitTest = (e: React.FormEvent<HTMLElement>) => {
+    e.preventDefault();
+    // e.stopPropagation(); prevent onSubmit to work
+    // use onSubmit to have css transition opacity to function and do a set free transition between comp
+    // submit with "enter" press seem to not have consistant css transition working !??
 
-    // form onSubmit do not work ??
     props.sendBet(bet);
   };
 
   // ==========================================================
-  // TEST CSS CLASS SWITCH
+  // ==========================================================
+  // CSS CLASS SWITCH
 
-  const [testCss, setTestCss] = useState({
+  const [switchCss, setswitchCss] = useState({
     display: "none",
     opacity: "content-opacity-off",
   });
 
   // SET STATE FUNCTION_____________________
-  const setStateFunc = (objAttr: any, cssClass: string) => {
-    setTestCss((prevCssClassSwitch) => {
+  const setStateFunc = (objAttr: string, cssClass: string) => {
+    setswitchCss((prevCssClassSwitch) => {
       return {
         ...prevCssClassSwitch,
         [objAttr]: cssClass,
@@ -57,6 +63,8 @@ export const DropDownForm = (props: DropDownForm) => {
     });
   };
 
+  // change css function so inline display
+  // on panel display
   const displayAndAnim = () => {
     setStateFunc("display", "");
 
@@ -65,6 +73,7 @@ export const DropDownForm = (props: DropDownForm) => {
     }, 10);
   };
 
+  // on panel hide ( transition first then display none)
   const hideAfterAnim = () => {
     setStateFunc("opacity", "content-opacity-off");
 
@@ -73,29 +82,42 @@ export const DropDownForm = (props: DropDownForm) => {
     }, 15);
   };
 
+  //trigger function only when panel button trigger
   useEffect(() => {
     props.panelDisplay ? displayAndAnim() : hideAfterAnim();
   }, [props.panelDisplay]);
 
-  //
-
   // ==================================================================
   // ==================================================================
   return (
-    <form style={{display: `${testCss.display}`}} className={`drop-down__form ${testCss.opacity}`}>
+    <form
+      style={{display: `${switchCss.display}`}}
+      className={`drop-down__form ${switchCss.opacity}`}
+      onSubmit={(e) => submitTest(e)}>
       <div>
         <div>
-          <label className="drop-down-text" htmlFor="betValueiD">
+          <label
+            className="drop-down-text"
+            htmlFor="betValueiD">
             Mise&nbsp;:
           </label>
-          <input type="text" name="betValue" id="betValueiD" onChange={getBet} value={bet} />
+          <input
+            type="text"
+            name="betValue"
+            id="betValueiD"
+            onChange={getBet}
+            value={bet}
+          />
         </div>
-        <p className="drop-down-text drop-down-gain">
+        <p className="drop-down-text drop-down-gaisn">
           Gain : <span>{props.gain}</span>
         </p>
       </div>
       <div>
-        <Button innerHtml="Parier" onClickButton={formClick} />
+        <Button
+          innerHtml="Parier"
+          onClickButton={formClick}
+        />
       </div>
     </form>
   );

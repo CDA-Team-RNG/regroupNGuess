@@ -50,21 +50,13 @@ $size-dropdown-logo: 2.8rem;
 // _________________________________________
 
 .content-opacity-off {
-  transition: opacity 0.15s;
+  transition: opacity 0.1s;
   opacity: 0;
 }
 
 .content-opacity-on {
-  transition: opacity 0.65s 0.1s;
+  transition: opacity 0.65s 0.12s;
   opacity: 1;
-}
-
-.display-none {
-  display: none;
-}
-
-.display-show {
-  display: auto;
 }
 
 // =====================================================================================================
@@ -110,7 +102,7 @@ $size-dropdown-logo: 2.8rem;
 
   // width: min($width-dropdownpanel-container, 90%);
 
-  width: 80vw;
+  width: 90vw;
   max-width: 35rem;
 }
 

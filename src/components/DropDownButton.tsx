@@ -26,6 +26,7 @@ export const DropDownButton = (props: any) => {
     setBetValue(() => betValue);
 
     // if "parier" button is pressed / form sumbit
+    // allow to switch display
     setIsGambled((prevIsGambled) => !prevIsGambled);
   };
 
@@ -33,28 +34,41 @@ export const DropDownButton = (props: any) => {
     <section className="drop-down__main-container">
       {/* TEMPS ? */}
       <button
-        /* switch class ___________________________________ */
-        className={`drop-down__button-general ${isPanelDropped ? "drop-down__button-on" : "drop-down__button-off"}`}
+        className={`
+            drop-down__button-general 
+            ${isPanelDropped ? "drop-down__button-on" : "drop-down__button-off"}`}
         onClick={(e) => dropDownBtnPress(e)}>
         {props.teamName}
-        {/* conditional arrow rendering __________________ */}
+
         {isPanelDropped && (
           <figure className="dropdown__arrow">
-            <img src={arrowDown} alt="arrow down" />
+            <img
+              src={arrowDown}
+              alt="arrow down"
+            />
           </figure>
         )}
       </button>
 
       <section
-        className={`drop-down__panel-container 
+        className={`
+            drop-down__panel-container 
             ${isPanelDropped ? "drop-down__panel-container-open" : "drop-down__panel-container-close"}
             ${props.number === 0 ? "panel-left" : "panel-right"}
-          `}>
-        {/* Switch panel after gambling ___________________ */}
+        `}>
+        {/* __________________  Switch panel according to gambling confirm ___________________ */}
         {isGambled ? (
-          <DropDownPostBet gain="420" bet={betValue} panelDisplay={isPanelDropped} />
+          <DropDownPostBet
+            gain="420"
+            bet={betValue}
+            panelDisplay={isPanelDropped}
+          />
         ) : (
-          <DropDownForm gain="420" sendBet={changeBetValue} panelDisplay={isPanelDropped} />
+          <DropDownForm
+            gain="420"
+            sendBet={changeBetValue}
+            panelDisplay={isPanelDropped}
+          />
         )}
 
         {/* ---------------------------------------- */}

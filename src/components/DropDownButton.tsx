@@ -51,9 +51,11 @@ export const DropDownButton = (props: any) => {
             ${props.number === 0 ? "panel-left" : "panel-right"}
           `}>
         {/* Switch panel after gambling ___________________ */}
-        {isGambled
-          ? isPanelDropped && <DropDownPostBet gain="420" bet={betValue} panelDisplay={isPanelDropped} />
-          : isPanelDropped && <DropDownForm gain="420" sendBet={changeBetValue} panelDisplay={isPanelDropped} />}
+        {isGambled ? (
+          <DropDownPostBet gain="420" bet={betValue} panelDisplay={isPanelDropped} />
+        ) : (
+          <DropDownForm gain="420" sendBet={changeBetValue} panelDisplay={isPanelDropped} />
+        )}
 
         {/* ---------------------------------------- */}
       </section>

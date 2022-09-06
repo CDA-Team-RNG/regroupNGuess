@@ -1,3 +1,4 @@
+import {NONAME} from "dns";
 import React, {useEffect, useState} from "react";
 
 import {Button} from "./Button";
@@ -38,10 +39,50 @@ export const DropDownForm = (props: DropDownForm) => {
     props.sendBet(bet);
   };
 
+  // ==========================================================
+  // TEST CSS CLASS SWITCH
+
+  const [testCss, setTestCss] = useState({
+    display: "none",
+    opacity: "content-opacity-off",
+  });
+
+  // SET STATE FUNCTION_____________________
+  const setStateFunc = (objAttr: any, cssClass: string) => {
+    setTestCss((prevCssClassSwitch) => {
+      return {
+        ...prevCssClassSwitch,
+        [objAttr]: cssClass,
+      };
+    });
+  };
+
+  const displayAndAnim = () => {
+    setStateFunc("display", "");
+
+    setTimeout(() => {
+      setStateFunc("opacity", "content-opacity-on");
+    }, 10);
+  };
+
+  const hideAfterAnim = () => {
+    setStateFunc("opacity", "content-opacity-off");
+
+    setTimeout(() => {
+      setStateFunc("display", "none");
+    }, 15);
+  };
+
+  useEffect(() => {
+    props.panelDisplay ? displayAndAnim() : hideAfterAnim();
+  }, [props.panelDisplay]);
+
+  //
+
   // ==================================================================
   // ==================================================================
   return (
-    <form className={`drop-down__form ${props.panelDisplay ? "content-opacity-on" : "content-opacity-off"}`}>
+    <form style={{display: `${testCss.display}`}} className={`drop-down__form ${testCss.opacity}`}>
       <div>
         <div>
           <label className="drop-down-text" htmlFor="betValueiD">

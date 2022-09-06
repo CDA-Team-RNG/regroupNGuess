@@ -7,30 +7,15 @@ $heigth-dropdownpanel-container: 7rem;
 
 $size-dropdown-logo: 2.8rem;
 
-// =====================================================================================================
-// =====================================================================================================
-// GENERAL STYLE :
-.drop-down-text {
-  color: white;
-  font-size: 165%;
-  font-weight: 500;
-}
-
-.drop-down-gain {
-  span {
-    // !!! % font-size add up with the parent, might need to avoid !!!
-    font-size: 110%;
-    color: $color-scheme-orange;
-  }
-}
-
 //  ANIMATIONS ==========================================================================================
+// ======================================================================================================
+
 @keyframes heightanim-open {
   from {
     height: 0rem;
   }
   95% {
-    height: 8.5rem;
+    height: 8rem;
   }
   to {
     height: $heigth-dropdownpanel-container;
@@ -48,9 +33,10 @@ $size-dropdown-logo: 2.8rem;
   }
 }
 
+// _________________________________________
 .drop-down__panel-container-open {
   //height: $heigth-dropdownpanel-container;
-  animation: 0.15s ease-out heightanim-open;
+  animation: 0.15s ease heightanim-open;
   height: $heigth-dropdownpanel-container;
 }
 
@@ -60,20 +46,43 @@ $size-dropdown-logo: 2.8rem;
   opacity: 0;
 }
 
-// dropdown panel content
+// dropdown panel content __________________
+// _________________________________________
+
 .content-opacity-off {
-  // transform: scaleY(0);
-  transition: opacity 0.05s ease;
+  transition: opacity 0.15s;
   opacity: 0;
 }
 
 .content-opacity-on {
-  // transform: scaleY(0);
-  transition: opacity 0.25s ease 0.2s;
+  transition: opacity 0.65s 0.1s;
   opacity: 1;
 }
 
-// DROP DOWN PANEL ==========================================================================================
+.display-none {
+  display: none;
+}
+
+.display-show {
+  display: auto;
+}
+
+// =====================================================================================================
+// =====================================================================================================
+// GENERAL STYLE :
+.drop-down-text {
+  color: white;
+  font-size: 165%;
+  font-weight: 500;
+}
+
+.drop-down-gain {
+  span {
+    // !!! % font-size add up with the parent, might need to avoid !!!
+    font-size: 110%;
+    color: $color-scheme-orange;
+  }
+}
 
 // DROP DOWN MAIN CONTAINER _______________________________________________________________________
 // ________________________________________________________________________________________________
@@ -84,6 +93,7 @@ $size-dropdown-logo: 2.8rem;
 
 // DROP DOWN GENERAL CONTAINER _______________________________________________________________________
 // ___________________________________________________________________________________________________
+
 .drop-down__panel-container {
   z-index: 1;
 
@@ -103,6 +113,9 @@ $size-dropdown-logo: 2.8rem;
   width: 80vw;
   max-width: 35rem;
 }
+
+// PANEL POSITION LEFT OR RIGHT ___________________________
+// ________________________________________________________
 
 .panel-left {
   left: -10%;

@@ -6,8 +6,8 @@ export const GamblePage = () => {
   return (
     <>
       <div className="temp-page">
-        <DropDownButton teamName="Rogue" panelPos={0} />
-        <DropDownButton teamName="MAD Lions" panelPos={1} />
+        <DropDownButton teamName="Rogue" number={0} />
+        <DropDownButton teamName="MAD Lions" number={1} />
       </div>
     </>
   );

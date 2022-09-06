@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 import {DropDownForm} from "./DropDownForm";
 import {DropDownPostBet} from "../pages-layout/DropDownPostBet";
@@ -46,17 +46,14 @@ export const DropDownButton = (props: any) => {
       </button>
 
       <section
-        className={`drop-down__panel-container ${
-          isPanelDropped ? "drop-down__panel-container-open" : "drop-down__panel-container-close"
-        }
-        ${props.panelPos === 0 ? "panel-left" : "panel-right"}
-        `}>
+        className={`drop-down__panel-container 
+            ${isPanelDropped ? "drop-down__panel-container-open" : "drop-down__panel-container-close"}
+            ${props.number === 0 ? "panel-left" : "panel-right"}
+          `}>
         {/* Switch panel after gambling ___________________ */}
-        {isGambled ? (
-          <DropDownPostBet gain="420" bet={betValue} panelDisplay={isPanelDropped} />
-        ) : (
-          <DropDownForm gain="420" panelDisplay={isPanelDropped} sendBet={changeBetValue} />
-        )}
+        {isGambled
+          ? isPanelDropped && <DropDownPostBet gain="420" bet={betValue} panelDisplay={isPanelDropped} />
+          : isPanelDropped && <DropDownForm gain="420" sendBet={changeBetValue} panelDisplay={isPanelDropped} />}
 
         {/* ---------------------------------------- */}
       </section>

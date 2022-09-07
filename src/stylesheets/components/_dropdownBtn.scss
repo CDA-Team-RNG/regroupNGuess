@@ -4,16 +4,16 @@
 
 .dropdown {
     width: 100%;
-    height: 60px;
+    height: max-content;
     position: relative;
 }
 
 .dropdown__btn {
     width: 100%;
-    height: 100%;
+    height: 60px;
     padding: 0;
     border: none;
-    background-color: #504254;
+    background-color: $color-scheme-dark-purple;
     color: white;
     display: flex;
     justify-content: center;
@@ -43,8 +43,12 @@
 }
 
 .gameLogo {
-    max-width: 25px;
-    max-height: 40px;
+    width: 100%;
+    object-fit: cover;
+}
+
+figure {
+    width: 30px;
 }
 
 /////////////////////
@@ -57,7 +61,7 @@
     z-index: 2;
     top: 100%;  
     width: 100%;    
-    background-color: #504254;
+    background-color: $color-scheme-dark-purple;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,12 +89,12 @@
 
 .category {
     width: 100%;
-    height: 50px;
+    height: 60px;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 2px solid #424454; 
+    border-top: 2px solid $color-scheme-dark-blue; 
     
     div {
         width: 85%;

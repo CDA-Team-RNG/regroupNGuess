@@ -44,14 +44,24 @@ export const HomePage = () => {
     {title: 'VCT 2022 - Japon', img: VctLogo},
   ];
 
+  // Methodes
+
+  const changeGame = (object: any) => {
+    setSelectedGame(object)
+  }
+
+  const changeLeague = (object:any) => {
+    setSelectedLeague(object)
+  }
+
 
   return (
     <>
       <div style={{padding: "20px"}}>
         <h2>Jeu sélectionné</h2>
-        <DropdownBtn data={games} selectedCategory={selectedGame} changeCategory={setSelectedGame} />
+        <DropdownBtn data={games} selectedCategory={selectedGame} changeCategory={changeGame} />
         <h2>Ligue sélectionnée</h2>
-        <DropdownBtn data={selectedGame.title === 'League of Legends' ? lolLeagues : valorantLeagues} selectedCategory={selectedLeague} changeCategory={setSelectedLeague} />
+        <DropdownBtn data={selectedGame.title === 'League of Legends' ? lolLeagues : valorantLeagues} selectedCategory={selectedLeague} changeCategory={changeLeague} />
       </div>
     </>
   ) 

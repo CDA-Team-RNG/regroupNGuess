@@ -8,13 +8,13 @@ export const DropdownBtn = (props: any) => {
     /**
      * Switch the value of the state display between true and false
      */
-    const switchDisplay = () => {
-        if(display === true) {
-            setDisplay(false)
-        }
-        else {
-            setDisplay(true)
-        }
+    const displayBtn = () => {
+        setDisplay(!display)
+    }
+
+    const hiddenBtn = () => {
+        console.log('help')
+        setDisplay(false)
     }
 
     /**
@@ -23,26 +23,29 @@ export const DropdownBtn = (props: any) => {
      */
     const changeSelectedCategory = (object: any) => {
         props.changeCategory(object);
-        switchDisplay();
-    } 
+    }
 
     return (
         <>
-            <div className='dropdown'>
-                <button onClick={switchDisplay} className='dropdown__btn'>
+            <div className='dropdown' onClick={displayBtn}>
+                <button className='dropdown__btn'>
                     <div className='dropdown__btn__item'>
                         <div>
-                            <img className='gameLogo' src={props.selectedCategory.img}/>
+                            <figure>
+                                <img className='gameLogo' src={props.selectedCategory.img}/>
+                            </figure>
                             <h3>{props.selectedCategory.title}</h3>
                         </div>   
                         <img className='arrowIcon' src={downArrow} />
                     </div>
                 </button>
-                <ul className={`dropdown__items ${display ? "" : "hidden"}`} >
+                <ul  onBlur={hiddenBtn} className={`dropdown__items ${display ? "" : "hidden"}`} >
                     {props.data.map((item: any) => (
                         <li key={item.title} className='category'>
                             <div onClick={() => changeSelectedCategory(item)}>
-                                <img className='gameLogo' src={item.img}/>
+                                <figure>
+                                    <img className='gameLogo' src={item.img}/>
+                                </figure>
                                 <h3>{item.title}</h3>
                             </div>
                         </li>

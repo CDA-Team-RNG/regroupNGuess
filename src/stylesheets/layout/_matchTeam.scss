@@ -6,11 +6,17 @@
 }
 
 .matchTeamLogo{
-    width: 3.125rem;
-    // height: 50px;
+    width: 100%;
+    object-fit: cover;
     filter: drop-shadow(0.313rem 0.313rem 0.063rem rgba(0, 0, 0, 0.372));
 }
 
+.matchTeamLogoDiv{
+    // height: 40px;
+    // border: 1px solid;
+    width: 60px;
+    height: 70px;
+}
 .matcheteamContainer{
     display: flex;
     margin-top: 0.625rem;
@@ -56,3 +62,4 @@
     width: 35px;
   border: 1px inset rgb(33, 130, 218);
 }
+

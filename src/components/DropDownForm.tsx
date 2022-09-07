@@ -101,6 +101,7 @@ export const DropDownForm = (props: DropDownForm) => {
             htmlFor="betValueiD">
             Mise&nbsp;:
           </label>
+
           <input
             type="text"
             name="betValue"

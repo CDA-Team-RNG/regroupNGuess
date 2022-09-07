@@ -5,6 +5,8 @@ import {DropDownPostBet} from "../pages-layout/DropDownPostBet";
 
 import arrowDown from "../assets/play-white.png";
 
+type dropDownBtnProps = {};
+
 export const DropDownButton = (props: any) => {
   const [isPanelDropped, setisPanelDropped] = useState<boolean>(false);
   // change dropDown panel display once user have bet.
@@ -32,7 +34,6 @@ export const DropDownButton = (props: any) => {
 
   return (
     <section className="drop-down__main-container">
-      {/* TEMPS ? */}
       <button
         className={`
             drop-down__button-general 
@@ -54,7 +55,7 @@ export const DropDownButton = (props: any) => {
         className={`
             drop-down__panel-container 
             ${isPanelDropped ? "drop-down__panel-container-open" : "drop-down__panel-container-close"}
-            ${props.number === 0 ? "panel-left" : "panel-right"}
+            ${props.side === "left" ? "panel-left" : "panel-right"}
         `}>
         {/* __________________  Switch panel according to gambling confirm ___________________ */}
         {isGambled ? (

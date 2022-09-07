@@ -38,7 +38,7 @@
   padding-block-start: 0.75rem;
   color: white;
 
-  transition: padding-block-end 0.15s;
+  transition: padding-block-end 0.15s, background-color 0.1s, gap 5s;
 
   // see mixin.scss
   @include button-press-effect(1px 2px 4px $button-comp-box-shadow-color);

@@ -6,8 +6,14 @@ export const GamblePage = () => {
   return (
     <>
       <div className="temp-page">
-        <DropDownButton teamName="Rogue" number={0} />
-        <DropDownButton teamName="MAD Lions" number={1} />
+        <DropDownButton
+          teamName="Rogue"
+          side={"left"}
+        />
+        <DropDownButton
+          teamName="MAD Lions"
+          side={"right"}
+        />
       </div>
     </>
   );

@@ -23,16 +23,23 @@
   'layout/navigation',
   'layout/grid',
   'layout/forms',
-  'layout/footer';
+  'layout/footer',
+  'layout/gamble',
+  'layout/teamOdds',
+  'layout/matchTeam';
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/match';
 
 // 6. Page-specific styles
 @import
   'pages/home';
+  
 
 // 7. Themes
 @import
   'themes/default';
+
+

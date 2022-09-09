@@ -23,11 +23,13 @@
   'layout/navigation',
   'layout/grid',
   'layout/forms',
-  'layout/footer';
+  'layout/footer',
+  'layout/teamStats';
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/teamEncounter';
 
 // 6. Page-specific styles
 @import

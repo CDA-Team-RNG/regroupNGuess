@@ -1,0 +1,15 @@
+.last-match-stat {
+    width: 40%;
+    margin-left: 20px;
+    padding-bottom: 10px;
+    background-color: $color-scheme-dark-purple;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid $color-scheme-orange;
+    font-size: 12px;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

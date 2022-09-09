@@ -1,0 +1,39 @@
+.team-encounter-card {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+
+    .encounter-date {
+        margin-left: 10px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: auto;
+        margin-top: 10px;
+
+        p {
+            margin: auto;
+        }
+
+        .score {
+            margin: 0 15px 5px 15px;
+            font-size: 14px;
+        }
+
+        .logo-team-red {
+            img {
+                width: 40px;
+            }
+        }
+
+        .logo-team-blue {
+            img {
+                width: 40px;
+            }
+        }
+    } 
+}
+

@@ -53,13 +53,14 @@ export const DropDownButton = (props: any) => {
 
   return (
     <section className="drop-down__main-container">
+      {/* __________________  Drop Down Button ___________________ */}
       <button
         className={`
             drop-down__button-general 
             ${isPanelDropped ? "drop-down__button-on" : "drop-down__button-off"}`}
         onClick={(e) => trottleDrop(e)}>
         {props.teamName}
-
+        {/* ___  conditional arrow icon rendering ____ */}
         {isPanelDropped && (
           <figure className="dropdown__arrow">
             <img
@@ -70,13 +71,14 @@ export const DropDownButton = (props: any) => {
         )}
       </button>
 
+      {/* __________________  Drop Down Panel Content ___________________ */}
       <section
         className={`
             drop-down__panel-container 
             ${isPanelDropped ? "drop-down__panel-container-open" : "drop-down__panel-container-close"}
             ${props.side === "left" ? "panel-left" : "panel-right"}
         `}>
-        {/* __________________  Switch panel according to gambling confirm ___________________ */}
+        {/* ______  Switch panel according to gambling confirm _______ */}
         {isGambled ? (
           <DropDownPostBet
             gain="420"

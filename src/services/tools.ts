@@ -6,9 +6,9 @@
  * @param {Function} stateSetter - state setter to use
  */
 export const updateState = (objAttr: string, cssClass: string, stateSetter: Function) => {
-  stateSetter((prevCssClassSwitch: any) => {
+  stateSetter((prevState: any) => {
     return {
-      ...prevCssClassSwitch,
+      ...prevState,
       [objAttr]: cssClass,
     };
   });

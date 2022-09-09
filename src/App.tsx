@@ -1,9 +1,10 @@
 import React from "react";
+import { GamblePage } from "./pages-layout/GamblePage";
 
 function App() {
   return (
     <>
-      <p className="Text-test">App</p>
+      <GamblePage/>
     </>
   );
 }

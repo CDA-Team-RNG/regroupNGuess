@@ -5,24 +5,43 @@ import {DropDownPostBet} from "../pages-layout/DropDownPostBet";
 
 import arrowDown from "../assets/play-white.png";
 
+// -----------------------------------------------------------
+// -----------------------------------------------------------
+
 type dropDownBtnProps = {};
 
 export const DropDownButton = (props: any) => {
-  const [isPanelDropped, setisPanelDropped] = useState<boolean>(false);
-  // change dropDown panel display once user have bet.
-  const [isGambled, setIsGambled] = useState<boolean>(false);
   const [betValue, setBetValue] = useState<string>("");
 
+  const [isPanelDropped, setisPanelDropped] = useState<boolean>(false);
+  const [isGambled, setIsGambled] = useState<boolean>(false);
+
   // ==========================================================
-  const dropDownBtnPress = (e: React.MouseEvent<HTMLElement>): void => {
+
+  /**
+   * Create a delay during which the panel drop cant be activated ( prevent potential css animation issue )
+   * @param e - button event
+   */
+  const trottleDrop = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     e.stopPropagation();
 
+    const theButton = e.currentTarget;
+
+    theButton.disabled = true;
     setisPanelDropped((prev) => !prev);
+    setTimeout(() => {
+      console.log("delay");
+      return (theButton.disabled = false);
+    }, 200);
   };
 
   // ==========================================================
-  // form submit, get bet value, to be send to "after bet" display
+
+  /**
+   * Save the bet value with form submit, isGambled state changed to switch display panel
+   * @param {string} betValue - string
+   */
   const changeBetValue = (betValue: string) => {
     // set bet points ( from input )
     setBetValue(() => betValue);
@@ -38,7 +57,7 @@ export const DropDownButton = (props: any) => {
         className={`
             drop-down__button-general 
             ${isPanelDropped ? "drop-down__button-on" : "drop-down__button-off"}`}
-        onClick={(e) => dropDownBtnPress(e)}>
+        onClick={(e) => trottleDrop(e)}>
         {props.teamName}
 
         {isPanelDropped && (

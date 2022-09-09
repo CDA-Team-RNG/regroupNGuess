@@ -1,19 +1,15 @@
 /**
- * Debounce Function prevent the function in parameter to be run again before the timeout end
- * @param {Function} func - The function to be executed
- * @param {number} wait - The amount of time to wait before executing the function.
- * @returns A function that will execute the function passed in after a certain amount of time.
+ * Update state, using choosed useState setter depending of objAttr & cssClass
+ * State must use object as value
+ * @param {string} objAttr - object attribute
+ * @param {string} cssClass - css class
+ * @param {Function} stateSetter - state setter to use
  */
-export const debounce = (func: Function, wait: number) => {
-  let timeOut: any;
-
-  return function toExcecute(...args: any[]) {
-    const withDelay = () => {
-      clearTimeout(timeOut);
-      func(...args);
+export const updateState = (objAttr: string, cssClass: string, stateSetter: Function) => {
+  stateSetter((prevCssClassSwitch: any) => {
+    return {
+      ...prevCssClassSwitch,
+      [objAttr]: cssClass,
     };
-
-    clearTimeout(timeOut);
-    timeOut = setTimeout(withDelay, wait);
-  };
+  });
 };

@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
 
+import {updateState} from "./../services/tools";
+
 import twitchLogo from "./../assets/twitch-white.png";
 import youtubeLogo from "./../assets/youtube-white.png";
 
@@ -13,42 +15,32 @@ export const DropDownPostBet = (props: PostBet) => {
   // ==========================================================
   // ==========================================================
   // CSS CLASS SWITCH
-
   const [switchCss, setswitchCss] = useState({
     display: "none",
     opacity: "content-opacity-off",
   });
 
-  // SET STATE FUNCTION_____________________
-  const setStateFunc = (objAttr: string, cssClass: string) => {
-    setswitchCss((prevCssClassSwitch) => {
-      return {
-        ...prevCssClassSwitch,
-        [objAttr]: cssClass,
-      };
-    });
-  };
-
   // change css function so inline display
+  // ( css display: none, class addition dont seem to work there, used inline to be sure to have highest specificity)
   // on panel display
   const displayAndAnim = () => {
-    setStateFunc("display", "");
+    updateState("display", "", setswitchCss);
 
     setTimeout(() => {
-      setStateFunc("opacity", "content-opacity-on");
-    }, 10);
+      updateState("opacity", "content-opacity-on", setswitchCss);
+    }, 20);
   };
 
   // on panel hide ( transition first then display none)
   const hideAfterAnim = () => {
-    setStateFunc("opacity", "content-opacity-off");
+    updateState("opacity", "content-opacity-off", setswitchCss);
 
     setTimeout(() => {
-      setStateFunc("display", "none");
+      updateState("display", "none", setswitchCss);
     }, 15);
   };
 
-  //trigger function only when panel button trigger
+  /* useEffect used to switch the panel css class ( to show or not the panel) depending of panelDisplay state */
   useEffect(() => {
     props.panelDisplay ? displayAndAnim() : hideAfterAnim();
   }, [props.panelDisplay]);

@@ -3,6 +3,8 @@ import React, {useEffect, useState} from "react";
 
 import {Button} from "./Button";
 
+import {updateState} from "./../services/tools";
+
 // might need to change gain key type later.
 type DropDownForm = {
   sendBet: Function;
@@ -14,12 +16,28 @@ export const DropDownForm = (props: DropDownForm) => {
   // input.value is a string.
   const [bet, setBet] = useState<string>("");
 
+  const [switchCss, setswitchCss] = useState({
+    display: "none",
+    opacity: "content-opacity-off",
+  });
+
   // ==========================================================
   // INPUT VALUE
-  const regex = /^[0-9]+$/;
+
+  /*
+   /^[0-9]+$/
+    ^ : character the string beging with
+    $ : character the string end with
+  */
+
+  /**
+   * Invoked by input onChange, filter (depend of regex test) user input to only update state setter when number are typed .
+   * Allow <empty.string> so input field can be cleared.
+   * @param e - React.ChangeEvent<HTMLInputElement>
+   */
   const getBet = (e: React.ChangeEvent<HTMLInputElement>): void => {
     // check if input is number only, allow empty string to erase everything
-    if (regex.test(e.target.value) || e.target.value === "") {
+    if (/^[0-9]+$/.test(e.target.value) || e.target.value === "") {
       setBet(() => e.target.value);
     } else {
       console.log("enter a number");
@@ -28,14 +46,19 @@ export const DropDownForm = (props: DropDownForm) => {
 
   // ==========================================================
   // FORM SUBMIT
-  const formClick = (e: React.MouseEvent<HTMLElement>) => {
+
+  const formClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     // no need here of the click for anything else than form submit
     // e.preventDefault();
     // prevent onSubmit to work
     e.stopPropagation();
   };
 
-  const submitTest = (e: React.FormEvent<HTMLElement>) => {
+  /**
+   * Function bound to form submit, pass the bet value to the parent ( DropDownButton) via sendBet() props.
+   * @param e - React.FormEvent<HTMLFormElement>
+   */
+  const submitTest = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // e.stopPropagation(); prevent onSubmit to work
     // use onSubmit to have css transition opacity to function and do a set free transition between comp
@@ -48,41 +71,27 @@ export const DropDownForm = (props: DropDownForm) => {
   // ==========================================================
   // CSS CLASS SWITCH
 
-  const [switchCss, setswitchCss] = useState({
-    display: "none",
-    opacity: "content-opacity-off",
-  });
-
-  // SET STATE FUNCTION_____________________
-  const setStateFunc = (objAttr: string, cssClass: string) => {
-    setswitchCss((prevCssClassSwitch) => {
-      return {
-        ...prevCssClassSwitch,
-        [objAttr]: cssClass,
-      };
-    });
-  };
-
   // change css function so inline display
+  // ( css display: none, class addition dont seem to work there, used inline to be sure to have highest specificity)
   // on panel display
   const displayAndAnim = () => {
-    setStateFunc("display", "");
+    updateState("display", "", setswitchCss);
 
     setTimeout(() => {
-      setStateFunc("opacity", "content-opacity-on");
-    }, 10);
+      updateState("opacity", "content-opacity-on", setswitchCss);
+    }, 20);
   };
 
   // on panel hide ( transition first then display none)
   const hideAfterAnim = () => {
-    setStateFunc("opacity", "content-opacity-off");
+    updateState("opacity", "content-opacity-off", setswitchCss);
 
     setTimeout(() => {
-      setStateFunc("display", "none");
+      updateState("display", "none", setswitchCss);
     }, 15);
   };
 
-  //trigger function only when panel button trigger
+  /* useEffect used to switch the panel css class ( to show or not the panel) depending of panelDisplay state */
   useEffect(() => {
     props.panelDisplay ? displayAndAnim() : hideAfterAnim();
   }, [props.panelDisplay]);

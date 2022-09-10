@@ -2,14 +2,14 @@
  * Update state, using choosed useState setter depending of objAttr & cssClass
  * State must use object as value
  * @param {string} objAttr - object attribute
- * @param {string} cssClass - css class
+ * @param {any} value - value of the updated object attribute
  * @param {Function} stateSetter - state setter to use
  */
-export const updateState = (objAttr: string, cssClass: string, stateSetter: Function) => {
+export const updateState = (objAttr: string, value: any, stateSetter: Function) => {
   stateSetter((prevState: any) => {
     return {
       ...prevState,
-      [objAttr]: cssClass,
+      [objAttr]: value,
     };
   });
 };

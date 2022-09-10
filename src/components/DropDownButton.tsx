@@ -24,7 +24,7 @@ export const DropDownButton = (props: any) => {
     e.stopPropagation();
     const dropdownbtn = e.currentTarget;
 
-    props.getInfo(props.side, dropdownbtn);
+    props.sendInfo(props.side, dropdownbtn);
   };
 
   // ==========================================================

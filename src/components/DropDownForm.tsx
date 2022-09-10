@@ -5,6 +5,8 @@ import {Button} from "./Button";
 
 import {updateState} from "./../services/tools";
 
+// -----------------------------------------------------------
+// -----------------------------------------------------------
 // might need to change gain key type later.
 type DropDownForm = {
   sendBet: Function;

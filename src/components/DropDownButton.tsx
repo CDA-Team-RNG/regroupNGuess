@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 
 import {DropDownForm} from "./DropDownForm";
 import {DropDownPostBet} from "../pages-layout/DropDownPostBet";
@@ -12,12 +12,9 @@ type dropDownBtnProps = {};
 
 export const DropDownButton = (props: any) => {
   const [betValue, setBetValue] = useState<string>("");
-
-  const [isPanelDropped, setisPanelDropped] = useState<boolean>(false);
   const [isGambled, setIsGambled] = useState<boolean>(false);
 
   // ==========================================================
-
   /**
    * Create a delay during which the panel drop cant be activated ( prevent potential css animation issue )
    * @param e - button event
@@ -25,43 +22,38 @@ export const DropDownButton = (props: any) => {
   const trottleDrop = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     e.stopPropagation();
+    const dropdownbtn = e.currentTarget;
 
-    const theButton = e.currentTarget;
-
-    theButton.disabled = true;
-    setisPanelDropped((prev) => !prev);
-    setTimeout(() => {
-      console.log("delay");
-      return (theButton.disabled = false);
-    }, 200);
+    props.getInfo(props.side, dropdownbtn);
   };
 
   // ==========================================================
-
   /**
    * Save the bet value with form submit, isGambled state changed to switch display panel
-   * @param {string} betValue - string
+   * @param {string} betValue - string, attribute coming from dropdownForm child
    */
   const changeBetValue = (betValue: string) => {
-    // set bet points ( from input )
     setBetValue(() => betValue);
-
-    // if "parier" button is pressed / form sumbit
-    // allow to switch display
-    setIsGambled((prevIsGambled) => !prevIsGambled);
+    // when betvalue is received mean form is submited, therefore can switch panel display
+    // with "isGambled"
+    setIsGambled((prev) => !prev);
   };
 
+  // ==================================================================
+  // ==================================================================
   return (
     <section className="drop-down__main-container">
       {/* __________________  Drop Down Button ___________________ */}
       <button
+        disabled={props.isDisabled}
         className={`
             drop-down__button-general 
-            ${isPanelDropped ? "drop-down__button-on" : "drop-down__button-off"}`}
+            ${props.setItOpen ? "drop-down__button-on" : "drop-down__button-off"}
+         `}
         onClick={(e) => trottleDrop(e)}>
         {props.teamName}
         {/* ___  conditional arrow icon rendering ____ */}
-        {isPanelDropped && (
+        {props.setItOpen && (
           <figure className="dropdown__arrow">
             <img
               src={arrowDown}
@@ -75,25 +67,23 @@ export const DropDownButton = (props: any) => {
       <section
         className={`
             drop-down__panel-container 
-            ${isPanelDropped ? "drop-down__panel-container-open" : "drop-down__panel-container-close"}
+            ${props.setItOpen ? "drop-down__panel-container-open" : "drop-down__panel-container-close"}
             ${props.side === "left" ? "panel-left" : "panel-right"}
         `}>
-        {/* ______  Switch panel according to gambling confirm _______ */}
+        {/* ______  Switch panel content depending gambling validation _______ */}
         {isGambled ? (
           <DropDownPostBet
             gain="420"
             bet={betValue}
-            panelDisplay={isPanelDropped}
+            panelDisplay={props.setItOpen}
           />
         ) : (
           <DropDownForm
             gain="420"
             sendBet={changeBetValue}
-            panelDisplay={isPanelDropped}
+            panelDisplay={props.setItOpen}
           />
         )}
-
-        {/* ---------------------------------------- */}
       </section>
     </section>
   );

@@ -5,6 +5,8 @@ import {updateState} from "./../services/tools";
 import twitchLogo from "./../assets/twitch-white.png";
 import youtubeLogo from "./../assets/youtube-white.png";
 
+// -----------------------------------------------------------
+// -----------------------------------------------------------
 type PostBet = {
   gain: string;
   bet: string;

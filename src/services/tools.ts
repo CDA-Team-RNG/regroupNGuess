@@ -13,3 +13,18 @@ export const updateState = (objAttr: string, cssClass: string, stateSetter: Func
     };
   });
 };
+
+/**
+ * Throttle function,  Create a delay during which the button is disabled after a state change
+ * ( prevent potential css animation issue if button spam is possible )
+ * @param {any} button - any - the button ( coming from event.currentTarget )
+ * @param {any} stateSetter - useState setter
+ * @param {number} delay - timeout delay
+ */
+export const throttle = (button: any, stateSetter: any, delay: number) => {
+  button.disabled = true;
+  stateSetter((prev: any) => !prev);
+  setTimeout(() => {
+    return (button.disabled = false);
+  }, delay);
+};

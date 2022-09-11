@@ -86,37 +86,3 @@ export const GamblePage = () => {
     </>
   );
 };
-
-/*
-
-  const switchPanel = (setter1: Function, setter2: Function, delay: number) => {
-    setTimeout(() => {
-      setter1();
-    }, delay);
-    setter2();
-  };
-
-
-
-   const managePanel = (side: string, dropdownbtn: HTMLButtonElement) => {
-    if (side === "left" && right.panel === true) {
-      switchPanel(
-        () => updateState("panel", !left.panel, setleft),
-        () => updateState("panel", !right.panel, setright),
-        170
-      );
-    } else if (side === "left") {
-      throttle(dropdownbtn, () => updateState("panel", !left.panel, setleft), 200);
-    }
-
-    if (side === "right" && left.panel === true) {
-      switchPanel(
-        () => updateState("panel", !right.panel, setright),
-        () => updateState("panel", !left.panel, setleft),
-        170
-      );
-    } else if (side === "right") {
-      throttle(dropdownbtn, () => updateState("panel", !right.panel, setright), 200);
-    }
-  };
-  */

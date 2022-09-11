@@ -57,8 +57,8 @@ export const DropDownButton = (props: dropDownBtnProps) => {
         disabled={props.isDisabled}
         className={`
             drop-down__button-general 
-            ${props.isDisabled ? "" : ""}
             ${props.panelDisplay ? "drop-down__button-on" : "drop-down__button-off"}
+            ${props.isDisabled ? "drop-down__button-disabled" : ""}
          `}
         onClick={(e) => trottleDrop(e)}>
         {props.teamName}

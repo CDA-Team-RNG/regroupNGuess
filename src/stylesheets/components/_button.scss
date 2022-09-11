@@ -58,6 +58,12 @@
   // see mixin.scss
 }
 
+.drop-down__button-disabled {
+  background-color: rgb(98, 98, 98);
+  border-color: rgb(168, 167, 167);
+  color: gray;
+}
+
 .drop-down__button-on {
   z-index: 2;
 

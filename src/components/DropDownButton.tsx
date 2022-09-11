@@ -1,18 +1,30 @@
 import React, {useEffect, useState, useRef} from "react";
 
 import {DropDownForm} from "./DropDownForm";
-import {DropDownPostBet} from "../pages-layout/DropDownPostBet";
+import {DropDownPostBet} from "./DropDownPostBet";
 
 import arrowDown from "../assets/play-white.png";
 
 // -----------------------------------------------------------
 // -----------------------------------------------------------
 
-type dropDownBtnProps = {};
+type dropDownBtnProps = {
+  teamName: string;
+  side: string;
+  getBtnInfo: Function;
+  panelDisplay: boolean;
+  getBetValidationInfo: Function;
+  isDisabled: boolean;
+};
 
-export const DropDownButton = (props: any) => {
+export const DropDownButton = (props: dropDownBtnProps) => {
   const [betValue, setBetValue] = useState<string>("");
   const [isGambled, setIsGambled] = useState<boolean>(false);
+
+  // use useEffect to send correct isGambled bool
+  useEffect(() => {
+    props.getBetValidationInfo(props.side, isGambled);
+  }, [isGambled]);
 
   // ==========================================================
 
@@ -21,7 +33,7 @@ export const DropDownButton = (props: any) => {
     e.stopPropagation();
     const dropdownbtn = e.currentTarget;
 
-    props.sendInfo(props.side, dropdownbtn);
+    props.getBtnInfo(props.side, dropdownbtn);
   };
 
   // ==========================================================
@@ -45,6 +57,7 @@ export const DropDownButton = (props: any) => {
         disabled={props.isDisabled}
         className={`
             drop-down__button-general 
+            ${props.isDisabled ? "" : ""}
             ${props.panelDisplay ? "drop-down__button-on" : "drop-down__button-off"}
          `}
         onClick={(e) => trottleDrop(e)}>

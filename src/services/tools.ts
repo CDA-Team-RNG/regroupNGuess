@@ -23,7 +23,7 @@ export const updateState = (objAttr: string, value: any, stateSetter: Function) 
  */
 export const throttle = (button: HTMLButtonElement, stateSetter: Function, delay: number) => {
   button.disabled = true;
-  stateSetter((prev: any) => !prev);
+  stateSetter();
   setTimeout(() => {
     return (button.disabled = false);
   }, delay);

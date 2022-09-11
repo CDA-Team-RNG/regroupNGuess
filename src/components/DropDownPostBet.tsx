@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 
-import {updateState} from "./../services/tools";
+import {updateState} from "../services/tools";
 
 import twitchLogo from "./../assets/twitch-white.png";
 import youtubeLogo from "./../assets/youtube-white.png";

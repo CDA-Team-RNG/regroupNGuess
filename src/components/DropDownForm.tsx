@@ -83,7 +83,6 @@ export const DropDownForm = (props: DropDownForm) => {
       updateState("opacity", "content-opacity-on", setswitchCss);
     }, 20);
   };
-
   // on panel hide ( transition first then display none)
   const hideAfterAnim = () => {
     updateState("opacity", "content-opacity-off", setswitchCss);
@@ -92,7 +91,6 @@ export const DropDownForm = (props: DropDownForm) => {
       updateState("display", "none", setswitchCss);
     }, 15);
   };
-
   /* useEffect used to switch the panel css class ( to show or not the panel) depending of panelDisplay state */
   useEffect(() => {
     props.panelDisplay ? displayAndAnim() : hideAfterAnim();

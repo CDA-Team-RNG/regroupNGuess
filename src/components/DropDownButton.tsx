@@ -15,10 +15,7 @@ export const DropDownButton = (props: any) => {
   const [isGambled, setIsGambled] = useState<boolean>(false);
 
   // ==========================================================
-  /**
-   * Create a delay during which the panel drop cant be activated ( prevent potential css animation issue )
-   * @param e - button event
-   */
+
   const trottleDrop = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     e.stopPropagation();

@@ -50,9 +50,8 @@ export const DropDownForm = (props: DropDownForm) => {
   // FORM SUBMIT
 
   const formClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    // no need here of the click for anything else than form submit
-    // e.preventDefault();
-    // prevent onSubmit to work
+    // only there for form submit
+    // e.preventDefault();  prevent onSubmit to work
     e.stopPropagation();
   };
 
@@ -64,8 +63,6 @@ export const DropDownForm = (props: DropDownForm) => {
     e.preventDefault();
     // e.stopPropagation(); prevent onSubmit to work
     // use onSubmit to have css transition opacity to function and do a set free transition between comp
-    // submit with "enter" press seem to not have consistant css transition working !??
-
     props.sendBet(bet);
   };
 

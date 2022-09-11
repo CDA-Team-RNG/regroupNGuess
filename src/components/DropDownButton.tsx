@@ -45,12 +45,12 @@ export const DropDownButton = (props: any) => {
         disabled={props.isDisabled}
         className={`
             drop-down__button-general 
-            ${props.setItOpen ? "drop-down__button-on" : "drop-down__button-off"}
+            ${props.panelDisplay ? "drop-down__button-on" : "drop-down__button-off"}
          `}
         onClick={(e) => trottleDrop(e)}>
         {props.teamName}
         {/* ___  conditional arrow icon rendering ____ */}
-        {props.setItOpen && (
+        {props.panelDisplay && (
           <figure className="dropdown__arrow">
             <img
               src={arrowDown}
@@ -64,7 +64,7 @@ export const DropDownButton = (props: any) => {
       <section
         className={`
             drop-down__panel-container 
-            ${props.setItOpen ? "drop-down__panel-container-open" : "drop-down__panel-container-close"}
+            ${props.panelDisplay ? "drop-down__panel-container-open" : "drop-down__panel-container-close"}
             ${props.side === "left" ? "panel-left" : "panel-right"}
         `}>
         {/* ______  Switch panel content depending gambling validation _______ */}
@@ -72,13 +72,13 @@ export const DropDownButton = (props: any) => {
           <DropDownPostBet
             gain="420"
             bet={betValue}
-            panelDisplay={props.setItOpen}
+            panelDisplay={props.panelDisplay}
           />
         ) : (
           <DropDownForm
             gain="420"
             sendBet={changeBetValue}
-            panelDisplay={props.setItOpen}
+            panelDisplay={props.panelDisplay}
           />
         )}
       </section>

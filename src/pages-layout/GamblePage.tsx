@@ -50,14 +50,14 @@ export const GamblePage = () => {
           teamName="Rogue"
           side={"left"}
           sendInfo={managePanel}
-          setItOpen={left}
+          panelDisplay={left}
           // isDisabled={false}
         />
         <DropDownButton
           teamName="MAD Lions"
           side={"right"}
           sendInfo={managePanel}
-          setItOpen={right}
+          panelDisplay={right}
           // isDisabled={false}
         />
       </div>

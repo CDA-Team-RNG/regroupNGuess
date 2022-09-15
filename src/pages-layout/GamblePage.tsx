@@ -3,6 +3,8 @@ import MatchSelected from "../components/MatchSelected";
 import { Navbar } from "./Navbar";
 import TeamStats from "./TeamStats";
 
+import {DropDownButtonContainer} from "../components/DropDownButtonContainer";
+
 export const GamblePage = () => {
 
   const data = {
@@ -18,6 +20,7 @@ export const GamblePage = () => {
   return (
     <>
     <Navbar />
+    <DropDownButtonContainer />;
       <MatchSelected data={data}/>
       <TeamStats/>
     </>

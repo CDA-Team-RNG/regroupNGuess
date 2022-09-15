@@ -30,11 +30,12 @@
   'components/dropdownBtn',
   'components/matchSelected',
   'components/teamEncounter',
-  'components/match';
+  'components/match',
+  "components/dropdown-panel.scss";
+
 
 // 6. Page-specific styles
 @import "pages/home";
 
 // 7. Themes
 @import "themes/default";
-

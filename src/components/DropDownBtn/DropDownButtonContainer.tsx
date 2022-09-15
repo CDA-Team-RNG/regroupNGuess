@@ -2,7 +2,7 @@ import React, {ButtonHTMLAttributes, useState} from "react";
 
 import {DropDownButton} from "./DropDownButton";
 
-import {throttle, updateState} from "../services/tools";
+import {throttle, updateState} from "../../services/tools";
 
 export const DropDownButtonContainer = () => {
   const [left, setleft] = useState({panel: false, btnDisabled: false});

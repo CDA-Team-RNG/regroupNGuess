@@ -1,10 +1,10 @@
 import {NONAME} from "dns";
 import React, {useEffect, useState} from "react";
 
-import {Button} from "./Button";
-import {TeamOdds} from "../pages-layout/TeamOdds";
+import {Button} from "../Button";
+import {TeamOdds} from "../../layout/MatchList/TeamOdds";
 
-import {updateState} from "./../services/tools";
+import {updateState} from "../../services/tools";
 
 // -----------------------------------------------------------
 // -----------------------------------------------------------

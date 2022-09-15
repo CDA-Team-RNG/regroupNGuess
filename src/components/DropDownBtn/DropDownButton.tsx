@@ -3,7 +3,7 @@ import React, {useEffect, useState, useRef} from "react";
 import {DropDownForm} from "./DropDownForm";
 import {DropDownPostBet} from "./DropDownPostBet";
 
-import arrowDown from "../assets/play-white.png";
+import arrowDown from "../../assets/play-white.png";
 
 // -----------------------------------------------------------
 // -----------------------------------------------------------

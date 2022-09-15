@@ -1,5 +1,5 @@
 import React from 'react'
-import { Match } from '../components/Match'
+import { Match } from '../../components/Match'
 
 export const MatchList = () => {
   return (

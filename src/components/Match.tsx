@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from "react";
-import {TeamsType} from "../models/teamsType";
-import {MatchTeam} from "../pages-layout/MatchTeam";
-import {teamService} from "../services/teamService";
-import vs from "../assets/vs.png";
+import React, { useEffect, useState } from 'react'
+import { TeamsType } from '../models/TeamsType'
+import { MatchTeam } from '../layout/MatchList/MatchTeam'
+import { teamService } from '../services/teamService';
+import vs from '../assets/vs.png'
 
 export const Match = () => {
     /* A hook that is used to store the data that is returned from the API. */
@@ -26,7 +26,7 @@ export const Match = () => {
     return (
         <>
             {teams &&  
-                <a className='match'>
+                <div className='match'>
                     <div className='teamLeft'>
                         <MatchTeam team={teams[0]} />
                     </div>
@@ -39,7 +39,7 @@ export const Match = () => {
                     <div className='teamRight'>
                         <MatchTeam team={teams[1]} />
                     </div>
-                </a>
+                </div>
             }
         </>
     )

@@ -17,15 +17,21 @@
   'layout/forms',
   'layout/footer',
   'layout/navbar',
-  'layout/teamStats';
+  'layout/teamStats',
+  'layout/teamOdds',
+  'layout/matchTeam',
+  'layout/matchList';
+  
+  
 
 // 5. Components
 @import
   'components/button',
   'components/matchSelected',
-  'components/teamEncounter';
+  'components/teamEncounter',
+  'components/match';
 
-// 6. Page-specific styles
+// 6. Page-specific styles;
 @import "pages/home";
 
 // 7. Themes

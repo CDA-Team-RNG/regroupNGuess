@@ -1,5 +1,6 @@
 import React from "react";
 import MatchSelected from "../components/MatchSelected";
+import { Navbar } from "./Navbar";
 import TeamStats from "./TeamStats";
 
 export const GamblePage = () => {
@@ -16,6 +17,7 @@ export const GamblePage = () => {
 
   return (
     <>
+    <Navbar />
       <MatchSelected data={data}/>
       <TeamStats/>
     </>

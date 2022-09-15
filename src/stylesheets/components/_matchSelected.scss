@@ -1,0 +1,55 @@
+.match-selected-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    background-color: #032E3B;
+    margin-top: 50px;
+    padding: 15px;
+
+    figure {
+        width: 45%;
+        padding-top: 3px;
+    }
+
+    div {
+        font-size: 12px;
+    }
+
+    img {
+        border-radius: 0.8rem;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .game {
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 4px;
+    }
+
+    .league {
+        font-weight: bold;
+        color: white;
+        margin-bottom: 4px;
+    }
+
+    .date {
+        color: #b3c0c4;
+        margin-bottom: 4px;
+    }
+
+    .versus {
+        color: white;
+        font-weight: bold;
+        margin-bottom: 4px;
+
+        span {
+            color: #F09E78;
+            font-weight: bold;
+            font-style: italic;
+        }
+    }
+}

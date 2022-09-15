@@ -1,5 +1,8 @@
+
 import React, { useEffect, useState } from "react";
 import { DropdownBtn } from "../components/DropdownBtn";
+import { Navbar } from "./Navbar";
+
 import LolLogo from '../assets/LoL_icon.png';
 import ValorantLogo from '../assets/Valorant_icon.png';
 import LecLogo from '../assets/LEC_icon.png';
@@ -7,6 +10,7 @@ import LcsLogo from '../assets/LCS_icon.png';
 import LckLogo from '../assets/LCK_icon.png';
 import LplLogo from '../assets/LPL_icon.png';
 import VctLogo from '../assets/VCT_icon.png';
+
 
 export const HomePage = () => {
   
@@ -57,7 +61,8 @@ export const HomePage = () => {
 
   return (
     <>
-      <div style={{padding: "20px"}}>
+     <Navbar />
+      <div >
         <h2>Jeu sélectionné</h2>
         <DropdownBtn data={games} selectedCategory={selectedGame} changeCategory={changeGame} />
         <h2>Ligue sélectionnée</h2>
@@ -66,3 +71,4 @@ export const HomePage = () => {
     </>
   ) 
 };
+

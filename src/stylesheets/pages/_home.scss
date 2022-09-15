@@ -1,3 +1,17 @@
-.Text-test {
-  color: red;
+.matchList{
+    background-color: #032e3b;
+    height: 60rem;
+  
+}
+
+.titre{
+    color: white;
+    font-size: 24px;
+    padding: 5px;
+    margin-left: 30px;
+}
+
+.matchListMatch{
+    display: flex;
+    flex-direction: column;
 }

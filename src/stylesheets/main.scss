@@ -27,11 +27,12 @@
 // 5. Components
 @import
   'components/button',
+  'components/dropdownBtn',
   'components/matchSelected',
   'components/teamEncounter',
   'components/match';
 
-// 6. Page-specific styles;
+// 6. Page-specific styles
 @import "pages/home";
 
 // 7. Themes

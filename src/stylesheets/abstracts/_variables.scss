@@ -47,6 +47,7 @@ $breakpoints: (
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
+
 $base-url: "/assets/" !default;
 
 // --------------------------------------------------------------------------------------------------------
@@ -62,3 +63,4 @@ $color-scheme-orange: #f09e78;
 
 // COLOR OTHERS:
 $button-comp-box-shadow-color: rgba(0, 0, 0, 0.373);
+

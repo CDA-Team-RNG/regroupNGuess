@@ -1,0 +1,246 @@
+// =====================================================================================================
+// ==================================== VARIABLES =====================================================
+// =====================================================================================================
+
+$width-dropdownpanel-container: 35rem;
+$heigth-dropdownpanel-container: 7rem;
+
+$size-dropdown-logo: 2.8rem;
+
+//  ANIMATIONS ==========================================================================================
+// ======================================================================================================
+
+@keyframes heightanim-open {
+  from {
+    height: 0rem;
+  }
+  95% {
+    height: 8rem;
+  }
+  to {
+    height: $heigth-dropdownpanel-container;
+  }
+}
+
+@keyframes heightanim-close {
+  from {
+    height: $heigth-dropdownpanel-container;
+    opacity: 1;
+  }
+  to {
+    height: 0rem;
+    opacity: 0;
+  }
+}
+
+// _________________________________________
+.drop-down__panel-container-open {
+  //height: $heigth-dropdownpanel-container;
+  animation: 0.15s ease heightanim-open;
+  height: $heigth-dropdownpanel-container;
+}
+
+.drop-down__panel-container-close {
+  animation: 0.15s ease heightanim-close;
+  height: 0;
+  opacity: 0;
+}
+
+// dropdown panel content __________________
+// _________________________________________
+
+.content-opacity-off {
+  transition: opacity 0.1s;
+  opacity: 0;
+}
+
+.content-opacity-on {
+  transition: opacity 0.65s 0.12s;
+  opacity: 1;
+}
+
+// =====================================================================================================
+// =====================================================================================================
+// GENERAL STYLE :
+.drop-down-text {
+  color: white;
+  font-size: 165%;
+  font-weight: 500;
+}
+
+.drop-down-gain {
+  span {
+    // !!! % font-size add up with the parent, might need to avoid !!!
+    font-size: 110%;
+    color: $color-scheme-orange;
+  }
+}
+
+// DROP DOWN MAIN CONTAINER _______________________________________________________________________
+// ________________________________________________________________________________________________
+.drop-down__main-container {
+  position: relative;
+  isolation: isolate;
+}
+
+// DROP DOWN GENERAL CONTAINER _______________________________________________________________________
+// ___________________________________________________________________________________________________
+
+.drop-down__panel-container {
+  z-index: 1;
+
+  position: absolute;
+
+  display: grid;
+  align-items: center;
+
+  background-color: $color-scheme-dark-purple;
+  border: 1px solid $color-scheme-orange;
+  border-radius: 0.8rem;
+
+  box-shadow: 1px 4px 4px $button-comp-box-shadow-color;
+
+  // width: min($width-dropdownpanel-container, 90%);
+
+  width: 90vw;
+  max-width: 35rem;
+}
+
+// PANEL POSITION LEFT OR RIGHT ___________________________
+// ________________________________________________________
+
+.panel-left {
+  left: -10%;
+}
+
+.panel-right {
+  right: -10%;
+}
+
+// DROP DOWN FORM  __________________________________________________________________________________
+// __________________________________________________________________________________________________
+.drop-down__form {
+  display: flex;
+  justify-content: space-around;
+
+  // set 100% for the entier form
+  width: 100%;
+
+  // input & label & gain txt
+  div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    // as form is 100% can set a size for div(1) with %
+    width: 50%;
+
+    // input & label
+    > div {
+      display: flex;
+      flex-direction: row;
+      gap: 0.8rem;
+
+      //for the div(1) width to work need to 100%
+      width: 100%;
+
+      input {
+        font-size: 190%;
+        font-weight: 600;
+        text-align: end;
+
+        border: none;
+        border-radius: 0.5rem;
+
+        padding: 0.2rem;
+
+        //for the div(1) width to work need to 100%
+        width: 100%;
+
+        &:focus {
+          outline: 2px solid $color-scheme-orange;
+        }
+      }
+    }
+  }
+
+  div:nth-of-type(2) {
+    display: grid;
+    align-items: center;
+  }
+}
+
+// DROP DOWN AFTER BET ______________________________________________________________________________
+// __________________________________________________________________________________________________
+.drop-down__post-bet {
+  display: flex;
+  justify-content: space-around;
+
+  // bet & potential gains
+  section:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem;
+
+    padding-block: 0.4rem;
+    padding-inline: 0.8rem;
+    border-radius: 0.5rem;
+    background-color: $color-scheme-dark-blue;
+
+    // bet value
+    p:nth-of-type(1) span {
+      padding-inline: 0.4rem 0.2rem;
+      padding-block: 0.1rem;
+      color: rgb(63, 62, 62);
+      background-color: rgb(163, 163, 163);
+      font-size: 110%;
+    }
+
+    p:nth-of-type(2) {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        padding-inline-start: 0.3rem;
+        padding-inline-end: 0.2rem;
+      }
+    }
+  }
+
+  // twitch & youtube
+  section:nth-of-type(2) {
+    padding-block: 0.3rem;
+    padding-inline: 0.8rem;
+    border-radius: 0.5rem;
+    background-color: $color-scheme-dark-blue;
+
+    article {
+      margin-block-start: 0.5rem;
+
+      display: flex;
+      justify-content: space-between;
+
+      figure {
+        width: $size-dropdown-logo;
+        height: $size-dropdown-logo;
+
+        padding: 0.5rem;
+        border-radius: 100%;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+          filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.595));
+        }
+      }
+
+      a:nth-of-type(1) figure {
+        background-color: rgb(117, 56, 167);
+      }
+      a:nth-of-type(2) figure {
+        background-color: rgb(167, 56, 56);
+      }
+    }
+  }
+}

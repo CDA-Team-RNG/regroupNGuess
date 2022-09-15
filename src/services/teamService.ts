@@ -4,8 +4,9 @@ const URL : string = 'http://localhost:3000/teams'
 
 export class TeamService {
     
-    findAll = (): Promise<TeamsType[]> => {
-        return fetch(URL).then((res) => res.json())
+    findAll = async (): Promise<TeamsType[]> => {
+        const res = await fetch(URL)
+        return await res.json()
     }
 }
 

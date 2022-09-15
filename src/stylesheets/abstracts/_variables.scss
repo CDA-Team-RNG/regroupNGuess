@@ -47,6 +47,7 @@ $breakpoints: (
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
+
 $base-url: "/assets/" !default;
 
 // --------------------------------------------------------------------------------------------------------
@@ -61,10 +62,9 @@ $color-scheme-red-purple: #815067;
 $color-scheme-orange: #f09e78;
 
 // COLOR OTHERS:
-$button-comp-box-shadow-color: rgba(0, 0, 0, 0.373);
-
 $color-font-general-white: rgb(226, 226, 226);
-
 $color-teamresult-border-picked: rgb(60, 185, 87);
 $color-teamresult-border-nopicked: rgb(230, 64, 64);
 $color-teamresult-percentage-sup-50: rgb(116, 162, 255);
+$button-comp-box-shadow-color: rgba(0, 0, 0, 0.373);
+

@@ -1,17 +1,9 @@
-.matchList{
-    background-color: #032e3b;
-    height: 60rem;
-  
+
+.temp-page {
+  display: flex;
+  justify-content: space-around;
+
+  // height: 100vh;
+  background-color: $color-scheme-dark-blue;
 }
 
-.titre{
-    color: white;
-    font-size: 24px;
-    padding: 5px;
-    margin-left: 30px;
-}
-
-.matchListMatch{
-    display: flex;
-    flex-direction: column;
-}

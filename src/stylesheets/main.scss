@@ -17,26 +17,37 @@
   "base/helpers";
 
 // 4. Layout-related sections
-@import 
-  "layout/header", 
-  "layout/navigation", 
-  "layout/grid", 
-  "layout/forms", 
-  "layout/footer", 
-  "layout/navbar",
-  "layout/teamStats", 
-  "layout/teamResult";
+
+@import
+  'layout/header',
+  'layout/navigation',
+  'layout/grid',
+  'layout/forms',
+  'layout/footer',
+  'layout/navbar',
+  'layout/teamStats',
+  'layout/teamOdds',
+  'layout/matchTeam',
+  'layout/matchList',
+   "layout/teamResult";
+  
+  
 
 // 5. Components
-@import 
-  "components/button", 
-  "components/matchSelected", 
-  "components/teamEncounter";
+@import
+  'components/button',
+  'components/dropdownBtn',
+  'components/matchSelected',
+  'components/teamEncounter',
+  'components/match',
+  "components/dropdown-panel.scss";
+
+
 
 // 6. Page-specific styles
 @import 
   "pages/home";
 
 // 7. Themes
-@import 
-  "themes/default";
+@import "themes/default";
+

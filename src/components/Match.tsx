@@ -24,7 +24,6 @@ export const Match = () => {
 
     return (
         <>
-            {/* A button to choose the match to bet on */}
             <button className='match'>
                 <div className='teamLeft'>
                     <MatchTeam team={teams[0]} />
@@ -36,7 +35,6 @@ export const Match = () => {
                     </p>
                 </div>
                 <div className='teamRight'>
-                    {/* Calling the MatchTeam component and passing the team[1] prop to it. */}
                     <MatchTeam team={teams[1]} />
                 </div>
             </button>

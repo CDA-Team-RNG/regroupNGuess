@@ -3,7 +3,7 @@ import React, {useEffect, useState, useRef} from "react";
 import {DropDownForm} from "./DropDownForm";
 import {DropDownPostBet} from "./DropDownPostBet";
 
-import arrowDown from "../assets/play-white.png";
+import arrowDown from "../../assets/play-white.png";
 
 // -----------------------------------------------------------
 // -----------------------------------------------------------
@@ -15,6 +15,7 @@ type dropDownBtnProps = {
   panelDisplay: boolean;
   getBetValidationInfo: Function;
   isDisabled: boolean;
+  odds: number;
 };
 
 export const DropDownButton = (props: dropDownBtnProps) => {
@@ -86,12 +87,14 @@ export const DropDownButton = (props: dropDownBtnProps) => {
             gain="420"
             bet={betValue}
             panelDisplay={props.panelDisplay}
+            odds={props.odds}
           />
         ) : (
           <DropDownForm
             gain="420"
             sendBet={changeBetValue}
             panelDisplay={props.panelDisplay}
+            odds={props.odds}
           />
         )}
       </section>

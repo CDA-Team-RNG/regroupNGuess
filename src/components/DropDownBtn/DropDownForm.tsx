@@ -1,9 +1,10 @@
 import {NONAME} from "dns";
 import React, {useEffect, useState} from "react";
 
-import {Button} from "./Button";
+import {Button} from "../Button";
+import {TeamOdds} from "../../layout/MatchList/TeamOdds";
 
-import {updateState} from "./../services/tools";
+import {updateState} from "../../services/tools";
 
 // -----------------------------------------------------------
 // -----------------------------------------------------------
@@ -12,6 +13,7 @@ type DropDownForm = {
   sendBet: Function;
   panelDisplay: boolean;
   gain: string;
+  odds: number;
 };
 
 export const DropDownForm = (props: DropDownForm) => {
@@ -116,9 +118,12 @@ export const DropDownForm = (props: DropDownForm) => {
             value={bet}
           />
         </div>
-        <p className="drop-down-text drop-down-gaisn">
-          Gain : <span>{props.gain}</span>
-        </p>
+        <div className="gain-odds">
+          <p className="drop-down-text drop-down-gaisn">
+            Gain : <span>{props.gain}</span>
+          </p>
+          <TeamOdds odds={props.odds} />
+        </div>
       </div>
       <div>
         <Button

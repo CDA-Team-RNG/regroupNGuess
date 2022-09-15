@@ -1,5 +1,5 @@
 import React from "react";
-import TeamResult from "./TeamResult";
+import TeamResult from "../layout/TeamResult";
 
 import rogueLogo from "../assets/rogue-rebrand-removebg-2.png";
 import MADLogo from "../assets/Mad-lions-madrid-removebg-2.png";

@@ -2,7 +2,7 @@ import React, {ButtonHTMLAttributes, useState} from "react";
 
 import {DropDownButton} from "./DropDownButton";
 
-import {throttle, updateState} from "../services/tools";
+import {throttle, updateState} from "../../services/tools";
 
 export const DropDownButtonContainer = () => {
   const [left, setleft] = useState({panel: false, btnDisabled: false});
@@ -73,6 +73,7 @@ export const DropDownButtonContainer = () => {
           panelDisplay={left.panel}
           getBetValidationInfo={manageBtnDisable}
           isDisabled={left.btnDisabled}
+          odds={1.56}
         />
         <DropDownButton
           teamName="MAD Lions"
@@ -81,6 +82,7 @@ export const DropDownButtonContainer = () => {
           panelDisplay={right.panel}
           getBetValidationInfo={manageBtnDisable}
           isDisabled={right.btnDisabled}
+          odds={2.01}
         />
       </div>
     </>

@@ -7,3 +7,21 @@
   background-color: $color-scheme-dark-blue;
 }
 
+.home_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-block-end: 40px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  gap: 8px;
+  border-bottom: 2px solid $color-scheme-orange;
+
+  h2 {
+    color: white;
+    font-size: 20px;
+    align-self: flex-start;
+    padding-left: 6%;
+  }
+}
+

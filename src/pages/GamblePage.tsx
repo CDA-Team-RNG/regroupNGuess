@@ -1,9 +1,9 @@
 import React from "react";
 import MatchSelected from "../components/MatchSelected";
-import { Navbar } from "./Navbar";
-import TeamStats from "./TeamStats";
+import { Navbar } from "../layout/Navbar";
+import TeamStats from "../layout/TeamStats";
 
-import {DropDownButtonContainer} from "../components/DropDownButtonContainer";
+import {DropDownButtonContainer} from "../components/DropDownBtn/DropDownButtonContainer";
 
 export const GamblePage = () => {
 

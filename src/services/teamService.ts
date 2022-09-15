@@ -1,4 +1,4 @@
-import { TeamsType } from '../models/teamsType'
+import { TeamsType } from '../models/TeamsType'
 
 const URL : string = 'http://localhost:3000/teams'
 

@@ -1,5 +1,5 @@
 import React from "react";
-import {TeamOdds} from "./TeamOdds";
+import {TeamOdds} from "./MatchList/TeamOdds";
 
 import winCrown from "../assets/win-crown.svg";
 

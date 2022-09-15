@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import downArrow from '../assets/downward-arrow.png'
 
-export const DropdownBtn = (props: any) => {
+export const CategoryDropDown = (props: any) => {
 
     const [display, setDisplay] = useState(false);
 

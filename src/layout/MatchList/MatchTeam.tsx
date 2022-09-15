@@ -1,7 +1,6 @@
 import { type } from '@testing-library/user-event/dist/type'
 import React from 'react'
-import { TeamsType } from '../models/teamsType'
-import { teamService } from '../services/teamService';
+import { TeamsType } from '../../models/TeamsType'
 import { TeamOdds } from './TeamOdds';
 
 

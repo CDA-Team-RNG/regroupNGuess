@@ -1,8 +1,8 @@
 
 import React, { useEffect, useState } from "react";
-import { DropdownBtn } from "../components/DropdownBtn";
-import { Navbar } from "./Navbar";
-import { MatchList } from "./MatchList";
+import { CategoryDropDown } from "../components/CategoryDropDown";
+import { Navbar } from "../layout/Navbar";
+import { MatchList } from "../layout/MatchList/MatchList";
 
 import LolLogo from '../assets/LoL_icon.png';
 import ValorantLogo from '../assets/Valorant_icon.png';
@@ -64,14 +64,14 @@ export const HomePage = () => {
   return (
     <>
       <Navbar />        
-      <div >
+      <div className="home_container">
         <h2>Jeu sélectionné</h2>
-        <DropdownBtn data={games} selectedCategory={selectedGame} changeCategory={changeGame} />
+        <CategoryDropDown data={games} selectedCategory={selectedGame} changeCategory={changeGame} />
         <h2>Ligue sélectionnée</h2>
-        <DropdownBtn data={selectedGame.title === 'League of Legends' ? lolLeagues : valorantLeagues} selectedCategory={selectedLeague} changeCategory={changeLeague} />
+        <CategoryDropDown data={selectedGame.title === 'League of Legends' ? lolLeagues : valorantLeagues} selectedCategory={selectedLeague} changeCategory={changeLeague} />
       </div>
      <MatchList /> 
     </>
-  ) 
+  )
 };
 

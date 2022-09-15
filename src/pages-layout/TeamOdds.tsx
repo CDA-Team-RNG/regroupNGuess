@@ -1,8 +1,9 @@
 import { type } from 'os'
 import React from 'react'
+import { TeamsType } from '../models/teamsType';
 
 export type TeamOddsProps = {
-  odds: number
+  odds: number;
 }
 
 /* A function that takes a prop called odds and returns a button with the odds.
@@ -18,7 +19,7 @@ export const TeamOdds = ( props: TeamOddsProps ) => {
         </div>
       </>
     )
-  } else {
+  } else  {
     return (
       <>
         <div className='teamOdds'>

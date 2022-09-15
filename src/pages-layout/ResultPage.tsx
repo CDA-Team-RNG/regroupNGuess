@@ -26,10 +26,10 @@ const tempInfo = [
 export const ResultPage = () => {
   return (
     <section className="temp-team-result">
-      {tempInfo.map((element) => {
+      {tempInfo.map((element, index: number) => {
         return (
           <TeamResult
-            teamName={element.teamName}
+            key={index} teamName={element.teamName}
             pic={element.image}
             percentage={element.percentage}
             betpoints={element.betpoints}

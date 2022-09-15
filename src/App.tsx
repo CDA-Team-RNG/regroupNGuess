@@ -8,9 +8,9 @@ import {ResultPage} from "./pages-layout/ResultPage";
 function App() {
   return (
     <>
-      {/* <HomePage />
-      <GamblePage /> */}
-      <ResultPage />
+      {/* <HomePage /> */}
+      <GamblePage />
+      {/* <ResultPage /> */}
     </>
   );
 }

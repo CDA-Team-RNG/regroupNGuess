@@ -24,12 +24,12 @@ export const MatchTeam = (props: MatchTeamProps) => {
             <img className='matchTeamLogo' src={props.team.logo} alt="" />
           </figure>
           <div className='matchTeamNameOdds2'>
-            <p className='matchTeamPName2'>{props.team.name}
+            <div className='matchTeamPName2'>{props.team.name}
               <hr className='matchTeamLine2' />
-            </p>
-            <p className='matchTeamOddsDiv'>
+            </div>
+            <div className='matchTeamOddsDiv'>
               {/* Calling the TeamOdds component and passing the odds prop to it. */}
-              <TeamOdds odds={props.team.odds} /></p>
+              <TeamOdds odds={props.team.odds} /></div>
           </div>
         </div>
       </>
@@ -42,12 +42,12 @@ export const MatchTeam = (props: MatchTeamProps) => {
             <img className='matchTeamLogo' src={props.team.logo} alt="" />
           </figure>
           <div className='matchTeamNameOdds'>
-            <p className='matchTeamPName'>{props.team.name}
+            <div className='matchTeamPName'>{props.team.name}
               <hr className='matchTeamLine' />
-            </p>
-            <p className='matchTeamOddsDiv'>
+            </div>
+            <div className='matchTeamOddsDiv'>
               {/* Calling the TeamOdds component and passing the odds prop to it. */}
-              <TeamOdds odds={props.team.odds} /></p>
+              <TeamOdds odds={props.team.odds} /></div>
           </div>
         </div>
       </>

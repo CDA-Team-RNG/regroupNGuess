@@ -6,7 +6,7 @@ import vs from '../assets/vs.png'
 
 export const Match = () => {
     /* A hook that is used to store the data that is returned from the API. */
-    const [teams, setTeams] = useState<TeamsType[]>([])
+    const [teams, setTeams] = useState<TeamsType[]>()
 
     /* Calling the findAllTeam function when the component mounts. */
     useEffect(() => {
@@ -24,7 +24,9 @@ export const Match = () => {
 
     return (
         <>
-            <button className='match'>
+        { teams && (
+
+            <a className='match'>
                 <div className='teamLeft'>
                     <MatchTeam team={teams[0]} />
                 </div>
@@ -37,7 +39,8 @@ export const Match = () => {
                 <div className='teamRight'>
                     <MatchTeam team={teams[1]} />
                 </div>
-            </button>
+            </a>
+                )}
         </>
     )
 }

@@ -2,8 +2,8 @@
   font-size: 145%;
   font-weight: 500;
 
-  height: fit-content;
 
+  height: fit-content;
   padding-inline: 1.3rem;
   padding-block: 1.2rem;
 
@@ -16,6 +16,7 @@
   // see mixin.scss
   @include button-press-effect(1px 2px 4px $button-comp-box-shadow-color);
 }
+
 // ------------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------------
 
@@ -97,3 +98,4 @@
     bottom: -5%;
   }
 }
+

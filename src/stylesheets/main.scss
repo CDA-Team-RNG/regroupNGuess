@@ -10,10 +10,29 @@
 @import "base/base", "base/fonts", "base/typography", "base/helpers";
 
 // 4. Layout-related sections
-@import "layout/header", "layout/navigation", "layout/grid", "layout/forms", "layout/footer";
+@import
+  'layout/header',
+  'layout/navigation',
+  'layout/grid',
+  'layout/forms',
+  'layout/footer',
+  'layout/navbar',
+  'layout/teamStats',
+  'layout/teamOdds',
+  'layout/matchTeam',
+  'layout/matchList';
+  
+  
 
 // 5. Components
-@import "components/button", "components/dropdown-panel.scss";
+@import
+  'components/button',
+  'components/dropdownBtn',
+  'components/matchSelected',
+  'components/teamEncounter',
+  'components/match',
+  "components/dropdown-panel.scss";
+
 
 // 6. Page-specific styles
 @import "pages/home";

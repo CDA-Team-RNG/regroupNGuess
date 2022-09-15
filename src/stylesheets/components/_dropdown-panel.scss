@@ -170,11 +170,21 @@ $size-dropdown-logo: 2.8rem;
   }
 }
 
+.gain-odds {
+  display: flex;
+
+  > div {
+    align-items: end;
+  }
+}
+
 // DROP DOWN AFTER BET ______________________________________________________________________________
 // __________________________________________________________________________________________________
 .drop-down__post-bet {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+
+  align-items: center;
 
   // bet & potential gains
   section:nth-of-type(1) {

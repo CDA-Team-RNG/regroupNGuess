@@ -15,6 +15,7 @@ type dropDownBtnProps = {
   panelDisplay: boolean;
   getBetValidationInfo: Function;
   isDisabled: boolean;
+  odds: number;
 };
 
 export const DropDownButton = (props: dropDownBtnProps) => {
@@ -86,12 +87,14 @@ export const DropDownButton = (props: dropDownBtnProps) => {
             gain="420"
             bet={betValue}
             panelDisplay={props.panelDisplay}
+            odds={props.odds}
           />
         ) : (
           <DropDownForm
             gain="420"
             sendBet={changeBetValue}
             panelDisplay={props.panelDisplay}
+            odds={props.odds}
           />
         )}
       </section>

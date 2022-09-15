@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 
 import {updateState} from "../services/tools";
+import {TeamOdds} from "../pages-layout/TeamOdds";
 
 import twitchLogo from "./../assets/twitch-white.png";
 import youtubeLogo from "./../assets/youtube-white.png";
@@ -11,6 +12,7 @@ type PostBet = {
   gain: string;
   bet: string;
   panelDisplay: boolean;
+  odds: number;
 };
 
 export const DropDownPostBet = (props: PostBet) => {
@@ -61,6 +63,8 @@ export const DropDownPostBet = (props: PostBet) => {
           Gain : <span>{props.gain}</span>
         </p>
       </section>
+
+      <TeamOdds odds={props.odds} />
 
       <section>
         <p className="drop-down-text"> Voir le match :</p>

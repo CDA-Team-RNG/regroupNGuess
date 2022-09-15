@@ -73,6 +73,7 @@ export const DropDownButtonContainer = () => {
           panelDisplay={left.panel}
           getBetValidationInfo={manageBtnDisable}
           isDisabled={left.btnDisabled}
+          odds={1.56}
         />
         <DropDownButton
           teamName="MAD Lions"
@@ -81,6 +82,7 @@ export const DropDownButtonContainer = () => {
           panelDisplay={right.panel}
           getBetValidationInfo={manageBtnDisable}
           isDisabled={right.btnDisabled}
+          odds={2.01}
         />
       </div>
     </>

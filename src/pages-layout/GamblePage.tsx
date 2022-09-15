@@ -19,9 +19,9 @@ export const GamblePage = () => {
 
   return (
     <>
-    <Navbar />
-    <DropDownButtonContainer />;
+      <Navbar />
       <MatchSelected data={data}/>
+      <DropDownButtonContainer />
       <TeamStats/>
     </>
   );

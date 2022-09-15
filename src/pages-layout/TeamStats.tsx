@@ -8,8 +8,8 @@ function TeamStats() {
   return (
     <>
       <div className='last-match-stat'>
-        {stats.map((match) => 
-          <TeamEncounter data={match}/>
+        {stats.map((match, index) => 
+          <TeamEncounter key={index} data={match}/>
         )}
       </div>
     </>

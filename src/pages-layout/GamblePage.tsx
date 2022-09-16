@@ -48,7 +48,12 @@ export const GamblePage = () => {
         </div>
         </div>
         <div className="teamStatsComponent">
+          <div className="teamStatsComponent1">
           <TeamStats stats={stats} />
+          </div>
+          <div className="teamStatsComponent2">
+          <TeamStats stats={stats} />
+          </div>
         </div>
       </div>
     </>

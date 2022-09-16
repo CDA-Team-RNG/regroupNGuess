@@ -3,9 +3,6 @@
     height: 100%;
 }
 
-.matchSelectedComponent{
-    
-}
 
 .gameStatus{
     color: white;
@@ -61,6 +58,17 @@
 
 .teamStatsComponent{
     margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+  
+}
+
+.teamStatsComponent1{
+    margin-right: 39px
+}
+
+.teamStatsComponent2{
+    margin-right: 37px
 }
 
 

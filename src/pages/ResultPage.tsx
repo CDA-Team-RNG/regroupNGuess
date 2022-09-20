@@ -1,5 +1,5 @@
 import React from "react";
-import TeamResult from "./TeamResult";
+import TeamResult from "../layout/TeamResult";
 
 import rogueLogo from "../assets/rogue-rebrand-removebg-2.png";
 import MADLogo from "../assets/Mad-lions-madrid-removebg-2.png";
@@ -29,7 +29,8 @@ export const ResultPage = () => {
       {tempInfo.map((element, index: number) => {
         return (
           <TeamResult
-            key={index} teamName={element.teamName}
+            key={index}
+            teamName={element.teamName}
             pic={element.image}
             percentage={element.percentage}
             betpoints={element.betpoints}

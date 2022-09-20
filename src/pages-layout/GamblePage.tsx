@@ -49,9 +49,11 @@ export const GamblePage = () => {
         </div>
         <div className="teamStatsComponent">
           <div className="teamStatsComponent1">
+            <p className="stats">Stats :</p>
           <TeamStats stats={stats} />
           </div>
           <div className="teamStatsComponent2">
+          <p className="stats">Stats :</p>
           <TeamStats stats={stats} />
           </div>
         </div>

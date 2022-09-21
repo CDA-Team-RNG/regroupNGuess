@@ -1,6 +1,6 @@
 import { type } from '@testing-library/user-event/dist/type'
 import React from 'react'
-import { TeamsType } from '../../models/TeamsType'
+import { TeamsType } from '../../models/teamsType';
 import { TeamOdds } from './TeamOdds';
 
 
@@ -49,11 +49,7 @@ export const MatchTeam = (props: MatchTeamProps) => {
             />
           </figure>
           <div className='matchTeamNameOdds'>
-<<<<<<< HEAD:src/pages-layout/MatchTeam.tsx
-            <div className='matchTeamPName'>{props.team.name}
-=======
             <div className='matchTeamPName2'>{props.team.name}
->>>>>>> dev:src/layout/MatchList/MatchTeam.tsx
               <hr className='matchTeamLine' />
             </div>
             <div className='matchTeamOddsDiv'>

@@ -49,7 +49,11 @@ export const MatchTeam = (props: MatchTeamProps) => {
             />
           </figure>
           <div className='matchTeamNameOdds'>
+<<<<<<< HEAD:src/pages-layout/MatchTeam.tsx
+            <div className='matchTeamPName'>{props.team.name}
+=======
             <div className='matchTeamPName2'>{props.team.name}
+>>>>>>> dev:src/layout/MatchList/MatchTeam.tsx
               <hr className='matchTeamLine' />
             </div>
             <div className='matchTeamOddsDiv'>

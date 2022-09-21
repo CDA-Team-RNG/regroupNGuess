@@ -1,6 +1,6 @@
 import { type } from 'os'
 import React from 'react'
-import { TeamsType } from '../models/teamsType';
+import { TeamsType } from '../../models/teamsType';
 
 export type TeamOddsProps = {
   odds: number;

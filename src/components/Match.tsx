@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { TeamsType } from '../models/TeamsType'
+import { TeamsType } from '../models/teamsType';
 import { MatchTeam } from '../layout/MatchList/MatchTeam'
 import { teamService } from '../services/teamService';
 import vs from '../assets/vs.png'

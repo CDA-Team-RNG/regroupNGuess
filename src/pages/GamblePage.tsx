@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import MatchSelected from "../components/MatchSelected";
 
-import { Navbar } from "./Navbar";
-import TeamStats from "./TeamStats";
+import { Navbar } from "../layout/Navbar";
+import TeamStats from "../layout/TeamStats";
 import vs from '../assets/vs.png'
 
-import { DropDownButtonContainer } from "../components/DropDownButtonContainer";
+import { DropDownButtonContainer } from "../components/DropDownBtn/DropDownButtonContainer";
 import { lastMatchsData } from "../models/Stats";
 
 export const GamblePage = () => {

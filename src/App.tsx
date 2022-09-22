@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import {GamblePage} from "./pages/GamblePage";
 import {HomePage} from "./pages/HomePage";
 import {ResultPage} from "./pages/ResultPage";
@@ -8,29 +8,14 @@ function App() {
   return (
     <>
      <Router>
-      <main>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/gaamble">About</Link>
-            </li>
-            <li>
-              <Link to="/result">Contact</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Route path="/"  component={HomePage} />
-        <Route path="/gamble" component={GamblePage} />
-        <Route path="/result" component={ResultPage} />
-      </main>
+ <Routes>
+        <Route path="/" element = {<HomePage />}  />       
+        <Route path="/gamble" element = {<GamblePage />} />         
+        <Route path="/result" element={<ResultPage />}/>      
+ </Routes>
     </Router>
-      {/* <HomePage />
-      <GamblePage />
-      <ResultPage /> */}
+
+   
     </>
   );
 }

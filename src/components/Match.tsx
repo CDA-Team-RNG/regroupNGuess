@@ -21,10 +21,15 @@ export const Match = () => {
    */
   const findAllTeam = () => {
     teamService.findAll().then((data) => setTeams(data));
-  };
+  }
+
+  const liquipedia = () => {
+    teamService.findMatch().then((data) => console.log(data));
+  }
 
     return (
         <>
+            <button onClick={liquipedia}>Test</button>
             {teams &&  
                 <div className='match'>
                     <div className='teamLeft'>

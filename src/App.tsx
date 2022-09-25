@@ -6,9 +6,9 @@ import {ResultPage} from "./pages/ResultPage";
 function App() {
   return (
     <>
-      {/* <HomePage /> */}
+      <HomePage />
       {/* <GamblePage /> */}
-      <ResultPage />
+      {/* <ResultPage /> */}
     </>
   );
 }

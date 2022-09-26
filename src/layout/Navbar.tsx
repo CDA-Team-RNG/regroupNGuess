@@ -1,18 +1,19 @@
 import React from 'react'
 import logo from '../assets/RNG_logo.png'
 import backArrow from '../assets/arrow.png'
+import { NavLink } from 'react-router-dom'
 
 export const Navbar = () => {
   return (
     <>
         <div className='navbar'>
             <div className='menu'>
-                <a href="/" className='menu__logo'>
+                <NavLink to="/" className='menu__logo'>
                     <img src={logo} className='menu__logo-img' alt='rng-logo'/>
-                </a>
-                <a href="/">
+                </NavLink>
+                <NavLink to='/'>
                     <img className='backArrow' src={backArrow}></img>
-                </a>
+                </NavLink>
             </div>
         </div>
     </>

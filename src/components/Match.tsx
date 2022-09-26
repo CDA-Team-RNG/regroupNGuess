@@ -3,30 +3,31 @@ import { TeamsType } from '../models/teamsType';
 import { MatchTeam } from '../layout/MatchList/MatchTeam'
 import { teamService } from '../services/teamService';
 import vs from '../assets/vs.png'
+import { NavLink, useNavigate } from 'react-router-dom';
 
 export const Match = () => {
     /* A hook that is used to store the data that is returned from the API. */
     const [teams, setTeams] = useState<TeamsType[]>()
 
 
-  /* Calling the findAllTeam function when the component mounts. */
-  useEffect(() => {
-    findAllTeam();
-  }, []);
+    /* Calling the findAllTeam function when the component mounts. */
+    useEffect(() => {
+        findAllTeam();
+    }, []);
 
-  /**
-   * When the component mounts, call the findAllTeam function, which will call the findAll function in
-   * the teamService, which will return a promise, which will set the state of the teams array to the
-   * data returned from the promise.
-   */
-  const findAllTeam = () => {
-    teamService.findAll().then((data) => setTeams(data));
-  };
+    /**
+     * When the component mounts, call the findAllTeam function, which will call the findAll function in
+     * the teamService, which will return a promise, which will set the state of the teams array to the
+     * data returned from the promise.
+     */
+    const findAllTeam = () => {
+        teamService.findAll().then((data) => setTeams(data));
+    };
 
     return (
         <>
-            {teams &&  
-                <div className='match'>
+            {teams &&
+                <NavLink className='match' to="/gamble" >
                     <div className='teamLeft'>
                         <MatchTeam team={teams[0]} />
                     </div>
@@ -39,7 +40,7 @@ export const Match = () => {
                     <div className='teamRight'>
                         <MatchTeam team={teams[1]} />
                     </div>
-                </div>
+                </NavLink>
             }
         </>
     )

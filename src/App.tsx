@@ -7,15 +7,13 @@ import {ResultPage} from "./pages/ResultPage";
 function App() {
   return (
     <>
-     <Router>
- <Routes>
-        <Route path="/" element = {<HomePage />}  />       
-        <Route path="/gamble" element = {<GamblePage />} />         
-        <Route path="/result" element={<ResultPage />}/>      
- </Routes>
-    </Router>
-
-   
+      <Router>
+        <Routes>
+          <Route path="/" element = {<HomePage />}  />       
+          <Route path="/gamble" element = {<GamblePage />} />         
+          <Route path="/result" element={<ResultPage />}/>      
+        </Routes>
+      </Router>
     </>
   );
 }

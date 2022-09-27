@@ -1,0 +1,73 @@
+.team-result {
+    
+    div {
+        display: flex;
+        color: white;
+        flex-direction: column;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 15px;
+        color: $color-scheme-orange;
+    }
+         
+    .score {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        font-size: 40px;
+    }
+
+    .match-win {
+        color: $color-scheme-orange;
+    }
+    
+    .match-lost {
+        color: white;
+    }
+}
+
+.gamble-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+
+    .gamble-total-pts {
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
+
+    .gamble-result-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 25px;
+        background-color: $color-scheme-dark-purple;
+        border-radius: 8px;
+        width: 70%;
+        height: 130px;
+
+        .gamble-upper-result {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .gamble-lower-result {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    span {
+        color: $color-scheme-orange;
+    }
+}

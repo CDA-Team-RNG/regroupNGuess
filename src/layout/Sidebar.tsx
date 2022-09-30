@@ -19,25 +19,31 @@ export const Sidebar = () => {
     ];
     
     const lolLeagues = [
-    {title: 'Europe Ouest', abr: 'LEC', img: LecLogo},
-    {title: 'Amérique Nord', abr: 'LCS', img: LcsLogo},
-    {title: 'Corée', abr: 'LCK', img: LckLogo},
-    {title: 'Chine', abr: 'LPL', img: LplLogo}
+    {region: 'Europe Ouest', title: 'LEC', img: LecLogo},
+    {region: 'Amérique Nord', title: 'LCS', img: LcsLogo},
+    {region: 'Corée', title: 'LCK', img: LckLogo},
+    {region: 'Chine', title: 'LPL', img: LplLogo}
     ];
     
     const valorantLeagues = [
-    {title: 'VCT 2022 - NA', img: VctLogo},
-    {title: 'VCT 2022 - EMEA', img: VctLogo},
-    {title: 'VCT 2022 - Corée', img: VctLogo},
-    {title: 'VCT 2022 - Japon', img: VctLogo},
+    {region: 'NA', title: 'VCT 2022', img: VctLogo},
+    {region: 'EMEA', title: 'VCT 2022', img: VctLogo},
+    {region: 'Corée', title: 'VCT 2022', img: VctLogo},
+    {region: 'Japon', title: 'VCT 2022', img: VctLogo},
     ];
 
     const changeGame = (game : string) => {
         if(game === "League of Legends") {
             setSelectedGame("League of Legends");
+            setSelectedLeague("Europe Ouest")
         } else {
             setSelectedGame("Valorant");
+            setSelectedLeague("NA");
         }
+    }
+
+    const changeLeague = (league: string) => {
+        setSelectedLeague(league);
     }
 
     return(
@@ -61,11 +67,11 @@ export const Sidebar = () => {
                 </div>
                 <div>
                     <h2 className='category-title'>Ligues</h2>
-                    <ul>
-                        {lolLeagues.map((item: any) => (
-                            <LeagueItems data={item} selected={selectedLeague}/>
-                        ))}
-                    </ul>
+                    <LeagueItems 
+                        data={selectedGame === "Valorant" ? valorantLeagues : lolLeagues} 
+                        selected={selectedLeague}
+                        changeLeague={changeLeague}
+                    />
                 </div>
             </aside>
         </>

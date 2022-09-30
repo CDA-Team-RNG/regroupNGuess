@@ -1,4 +1,5 @@
 .sidebar {
+    display: none;
     position: fixed;
     background-color: #1c1c22;
     width: 350px;
@@ -8,7 +9,7 @@
 }
 
 .category-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding-left: 30px;
     margin-top: 40px;
     margin-bottom: 30px;
@@ -28,9 +29,11 @@
 .category-item {
     display: flex;
     align-items: center;
-    padding: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 30px;
     height: 50px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 
     figure {
         width: 40px;
@@ -50,3 +53,34 @@
 .selected {
     background-color: #393942;
 }
+
+
+@media only screen and (min-width: 768px) {
+    .sidebar {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .sidebar {
+        width: 250px;
+    }
+
+
+    .category-item {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 1rem;
+
+        figure {
+            width: 30px;
+        }
+
+        p {
+            span {
+                display: none;
+            }
+        }
+    }
+}
+

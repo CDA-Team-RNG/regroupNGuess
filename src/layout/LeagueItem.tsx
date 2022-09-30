@@ -1,15 +1,20 @@
 export const LeagueItems = (props : any) => {
     return(
-        <li className={props.selected === props.data.title ? 'category-item selected' : 'category-item'}
-            
-            >
-            <figure>
-                <img className="gameLogo" src={props.data.img} />
-            </figure>
-            <p>
-                {props.data.abr} 
-                <span className="italic"> ({props.data.title})</span>
-            </p>
-        </li>
+        <ul>
+            {props.data.map((item: any, index: number) => (
+                <li key={index} 
+                    className={props.selected === item.region ? 'category-item selected' : 'category-item'}
+                    onClick={() => props.changeLeague(item.region)}
+                    >
+                    <figure>
+                        <img className="gameLogo" src={item.img} />
+                    </figure>
+                    <p>
+                        {item.region} 
+                        <span className="italic"> ({item.title})</span>
+                    </p>
+                </li>
+            ))}
+        </ul>
     )
 }

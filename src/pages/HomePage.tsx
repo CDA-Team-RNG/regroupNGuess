@@ -12,8 +12,6 @@ import LckLogo from '../assets/LCK_icon.png';
 import LplLogo from '../assets/LPL_icon.png';
 import VctLogo from '../assets/VCT_icon.png';
 
-
-
 export const HomePage = () => {
   
   const [selectedGame, setSelectedGame] = useState({title: 'League of Legends', img: LolLogo});
@@ -63,14 +61,13 @@ export const HomePage = () => {
 
   return (
     <>
-      <Navbar />        
       <div className="home_container">
         <h2>Jeu sélectionné</h2>
         <CategoryDropDown data={games} selectedCategory={selectedGame} changeCategory={changeGame} />
         <h2>Ligue sélectionnée</h2>
         <CategoryDropDown data={selectedGame.title === 'League of Legends' ? lolLeagues : valorantLeagues} selectedCategory={selectedLeague} changeCategory={changeLeague} />
       </div>
-     <MatchList /> 
+      <MatchList /> 
     </>
   )
 };

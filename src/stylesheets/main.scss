@@ -29,9 +29,8 @@
   'layout/teamOdds',
   'layout/matchTeam',
   'layout/matchList',
-  'layout/sidebar', 
-  "layout/teamResult";
-  
+  'layout/teamResult',
+  'layout/sidebar';
   
 
 // 5. Components
@@ -43,10 +42,9 @@
   'components/match',
   "components/dropdown-panel.scss";
 
-
-
 // 6. Page-specific styles
 @import 
+  "pages/app",
   "pages/home",
   "pages/gamble",
   "pages/result";

@@ -9,9 +9,9 @@ export const Navbar = () => {
         <div className='navbar'>
             <div className='menu'>
                 <NavLink to="/" className='menu__logo'>
-                    <img src={logo} className='menu__logo-img' alt='rng-logo'/>
+                    <img src={logo} alt='rng-logo'/>
                 </NavLink>
-                <NavLink to='/'>
+                <NavLink className='menu__arrow' to='/'>
                     <img className='backArrow' src={backArrow}></img>
                 </NavLink>
             </div>

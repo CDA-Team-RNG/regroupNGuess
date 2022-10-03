@@ -27,9 +27,8 @@ export const MatchTeam = (props: MatchTeamProps) => {
             />
           </figure>
           <div className='matchTeamNameOdds2'>
-            <div className='matchTeamPName2'>{props.team.name}
-              <hr className='matchTeamLine2' />
-            </div>
+            <div className='matchTeamPName2'>{props.team.name}</div>
+            <hr className='matchTeamLine2' />
             <div className='matchTeamOddsDiv'>
               {/* Calling the TeamOdds component and passing the odds prop to it. */}
               <TeamOdds odds={props.team.odds} /></div>
@@ -49,9 +48,8 @@ export const MatchTeam = (props: MatchTeamProps) => {
             />
           </figure>
           <div className='matchTeamNameOdds'>
-            <div className='matchTeamPName2'>{props.team.name}
-              <hr className='matchTeamLine' />
-            </div>
+            <div className='matchTeamPName2'>{props.team.name}</div>
+            <hr className='matchTeamLine' />
             <div className='matchTeamOddsDiv'>
               {/* Calling the TeamOdds component and passing the odds prop to it. */}
               <TeamOdds odds={props.team.odds} /></div>

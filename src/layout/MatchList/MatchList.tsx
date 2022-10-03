@@ -12,6 +12,11 @@ export const MatchList = () => {
           <Match />
           <Match />
           <Match />
+          <Match />
+          <Match />
+          <Match />
+          <Match />
+          <Match />
         </div>
       </div>
     </>

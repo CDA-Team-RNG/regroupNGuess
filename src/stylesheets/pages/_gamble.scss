@@ -1,77 +1,69 @@
-.gamblePage{
-    background-color: #032e3b;
-    height: 100%;
+.gamblePage {
+  background-color: #032e3b;
+  height: 100%;
 }
 
-
-.gameStatus{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: bold;
-    font-size: 11px;
+.gameStatus {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  font-size: 11px;
 }
 
-.timeColor{
-    color: #f09e78;
+.timeColor {
+  color: #f09e78;
 }
 
-.logo-team-red-gamble{
-    width: 120px;
-    height: 100px;
+.logo-team-red-gamble {
+  width: 120px;
+  height: 100px;
 }
 
-.logo-team-red-gamble-logo{
-    width: 100%;
-    object-fit: cover;
-    filter: drop-shadow(0.313rem 0.313rem 0.063rem rgba(0, 0, 0, 0.372));
+.logo-team-red-gamble-logo {
+  width: 100%;
+  object-fit: cover;
+  filter: drop-shadow(0.313rem 0.313rem 0.063rem rgba(0, 0, 0, 0.372));
 }
 
-.logo-team-red-gamble-logoFNC{
-    width: 100%;
-    object-fit: cover;
-    filter: drop-shadow(0.313rem 0.313rem 0.063rem rgba(0, 0, 0, 0.372));
-    margin-top: 30px;
-
+.logo-team-red-gamble-logoFNC {
+  width: 100%;
+  object-fit: cover;
+  filter: drop-shadow(0.313rem 0.313rem 0.063rem rgba(0, 0, 0, 0.372));
+  margin-top: 30px;
 }
 
-.matchSelected{
-    display: flex;
-    justify-content: center;
-    height: 150px;
-    padding-top: 20px;
-    
+.matchSelected {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  padding-top: 20px;
 }
 
-.imgVsGamble{
-    width: 100px;
-    height: 100px;
-    margin-top: 40px;
-    margin-right: 10px;
-    margin-left: 10px;
+.imgVsGamble {
+  width: 100px;
+  height: 100px;
+  margin-top: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
-.dropDownComponent{
-    margin-top: 30px;
+.teamStatsComponent {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
 }
 
-.teamStatsComponent{
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-around;
-  
+.teamStatsComponent1 {
+  margin-right: 39px;
 }
 
-.teamStatsComponent1{
-    margin-right: 39px
+.teamStatsComponent2 {
+  margin-right: 37px;
 }
 
-.teamStatsComponent2{
-    margin-right: 37px
-}
-
-.stats{
-    color: white;
-    margin-left: 25px;
+.stats {
+  color: white;
+  margin-left: 25px;
 }

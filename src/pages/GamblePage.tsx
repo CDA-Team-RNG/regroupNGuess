@@ -24,8 +24,6 @@ export const GamblePage = () => {
   return (
     <>
       <section className="gamblePage">
-        <Navbar />
-
         {/* --------------------------------------------------- */}
         <div className="matchSelectedComponent">
           <MatchSelected data={data} />

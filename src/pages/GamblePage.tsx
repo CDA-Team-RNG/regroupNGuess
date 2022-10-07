@@ -29,7 +29,7 @@ export const GamblePage = () => {
         <MatchSelected data={data} />
 
         {/* --------------------------------------------------- */}
-        <section className="matchSelectedDropDown">
+        <section>
           {/* --------------------------------------------------- */}
           <article className="gameStatus">
             <p>Statut du match :</p>
@@ -47,7 +47,7 @@ export const GamblePage = () => {
               />
             </figure>
 
-            <figure className="vsGamble">
+            <figure>
               <img
                 className="imgVsGamble"
                 src={vs}

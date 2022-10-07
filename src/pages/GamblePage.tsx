@@ -25,20 +25,19 @@ export const GamblePage = () => {
     <>
       <section className="gamblePage">
         {/* --------------------------------------------------- */}
-        <div className="matchSelectedComponent">
-          <MatchSelected data={data} />
-        </div>
 
-        {/* --------------------------------------------------- */}
-        <div className="gameStatus">
-          <p>Statut du match :</p>
-          <p>
-            Début dans <span className="timeColor">40</span> min
-          </p>
-        </div>
+        <MatchSelected data={data} />
 
         {/* --------------------------------------------------- */}
         <section className="matchSelectedDropDown">
+          {/* --------------------------------------------------- */}
+          <article className="gameStatus">
+            <p>Statut du match :</p>
+            <p>
+              Début dans <span className="timeColor">40</span> min
+            </p>
+          </article>
+
           <article className="matchSelected">
             <figure className="logo-team-red-gamble">
               <img
@@ -64,9 +63,9 @@ export const GamblePage = () => {
               />
             </figure>
           </article>
-
-          <DropDownButtonContainer />
         </section>
+
+        <DropDownButtonContainer />
 
         {/* --------------------------------------------------- */}
         <section className="teamStatsComponent">

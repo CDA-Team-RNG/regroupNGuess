@@ -1,12 +1,3 @@
-// =====================================================================================================
-// ==================================== VARIABLES =====================================================
-// =====================================================================================================
-
-$width-dropdownpanel-container: 35rem;
-$heigth-dropdownpanel-container: 7rem;
-
-$size-dropdown-logo: 2.8rem;
-
 //  ANIMATIONS ==========================================================================================
 // ======================================================================================================
 
@@ -94,6 +85,8 @@ $size-dropdown-logo: 2.8rem;
   display: grid;
   align-items: center;
 
+  height: 110px;
+
   background-color: $color-scheme-dark-purple;
   border: 1px solid $color-scheme-orange;
   border-radius: 0.8rem;
@@ -103,7 +96,12 @@ $size-dropdown-logo: 2.8rem;
   // width: min($width-dropdownpanel-container, 90%);
 
   width: 90vw;
-  max-width: 35rem;
+  max-width: 24rem;
+
+  @media only screen and (min-width: $media-dropdown-desktop-v) {
+    transform: translateX(-50%);
+    height: 130px;
+  }
 }
 
 // PANEL POSITION LEFT OR RIGHT ___________________________
@@ -111,17 +109,38 @@ $size-dropdown-logo: 2.8rem;
 
 .panel-left {
   left: -10%;
+
+  @media only screen and (min-width: $media-dropdown-desktop-v) {
+    left: 50%;
+  }
 }
 
 .panel-right {
   right: -10%;
+  @media only screen and (min-width: $media-dropdown-desktop-v) {
+    left: 50%;
+  }
 }
 
 // DROP DOWN FORM  __________________________________________________________________________________
 // __________________________________________________________________________________________________
+
+.form-gain-container {
+  @media only screen and (min-width: $media-dropdown-desktop-v) {
+    // to get padding not growing inside
+    box-sizing: content-box;
+    background-color: $color-scheme-dark-blue;
+    padding: 15px 10px;
+    border-radius: 5px;
+  }
+}
+
 .drop-down__form {
   display: flex;
   justify-content: space-around;
+  @media only screen and (min-width: $media-dropdown-desktop-v) {
+    justify-content: space-around;
+  }
 
   // set 100% for the entier form
   width: 100%;

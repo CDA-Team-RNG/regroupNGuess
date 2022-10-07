@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import MatchSelected from "../components/MatchSelected";
 
-import {Navbar} from "../layout/Navbar";
 import TeamStats from "../layout/TeamStats";
 import vs from "../assets/vs.png";
 
@@ -29,7 +28,7 @@ export const GamblePage = () => {
         <MatchSelected data={data} />
 
         {/* --------------------------------------------------- */}
-        <section>
+        <section className="matchSelected-container">
           {/* --------------------------------------------------- */}
           <article className="gameStatus">
             <p>Statut du match :</p>
@@ -47,7 +46,7 @@ export const GamblePage = () => {
               />
             </figure>
 
-            <figure>
+            <figure className="VsGamble-figure">
               <img
                 className="imgVsGamble"
                 src={vs}

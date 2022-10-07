@@ -65,7 +65,7 @@ export const DropDownButtonContainer = () => {
   // ==================================================================
   return (
     <>
-      <div className="temp-page">
+      <section className="dropDownButton_stats_main-container">
         <DropDownButton
           teamName="Rogue"
           side={"left"}
@@ -75,6 +75,7 @@ export const DropDownButtonContainer = () => {
           isDisabled={left.btnDisabled}
           odds={1.56}
         />
+
         <DropDownButton
           teamName="MAD Lions"
           side={"right"}
@@ -84,7 +85,7 @@ export const DropDownButtonContainer = () => {
           isDisabled={right.btnDisabled}
           odds={2.01}
         />
-      </div>
+      </section>
     </>
   );
 };

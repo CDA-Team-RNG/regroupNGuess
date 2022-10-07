@@ -102,7 +102,7 @@ export const DropDownForm = (props: DropDownForm) => {
       style={{display: `${switchCss.display}`}}
       className={`drop-down__form ${switchCss.opacity}`}
       onSubmit={(e) => submitTest(e)}>
-      <div>
+      <div className="form-gain-container">
         <div>
           <label
             className="drop-down-text"

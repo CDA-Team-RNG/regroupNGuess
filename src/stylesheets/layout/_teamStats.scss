@@ -1,16 +1,23 @@
 .last-match-stat {
-  width: 100%;
-  padding-inline: 20px;
-  // margin-left: 20px;
-  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 5px;
+  width: min(45vw, 19rem);
+
+  padding-inline: min(5%, 20px);
+  padding-block: 10px;
+
   background-color: $color-scheme-dark-purple;
   color: white;
   border-radius: 10px;
   border: 2px solid $color-scheme-orange;
-  font-size: 12px;
-  font-weight: bold;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  font-size: 0.85rem;
+
+  @media only screen and (min-width: $media-768px) {
+    font-size: 1rem;
+  }
+  font-weight: bold;
 }

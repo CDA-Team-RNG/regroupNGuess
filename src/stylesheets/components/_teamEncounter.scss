@@ -1,39 +1,47 @@
 .team-encounter-card {
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
+  display: flex;
+  flex-direction: column;
 
-    .encounter-date {
-        margin-left: 10px;
+  .encounter-date {
+    margin-left: 10px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    //
+    justify-content: space-evenly;
+    gap: 1rem;
+    // margin: auto;
+    // margin-top: 10px;
+
+    // p {
+    //   margin: auto;
+    // }
+
+    figure {
+      width: min(40%, 70px);
+      img {
+        width: 100%;
+      }
     }
 
-    div {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin: auto;
-        margin-top: 10px;
+    .score {
+      //   margin: 0 15px 5px 15px;
+      //   font-size: 14px;
+    }
 
-        p {
-            margin: auto;
-        }
+    // .logo-team-red {
+    //   img {
+    //     width: 40px;
+    //   }
+    // }
 
-        .score {
-            margin: 0 15px 5px 15px;
-            font-size: 14px;
-        }
-
-        .logo-team-red {
-            img {
-                width: 40px;
-            }
-        }
-
-        .logo-team-blue {
-            img {
-                width: 40px;
-            }
-        }
-    } 
+    // .logo-team-blue {
+    //   img {
+    //     width: 40px;
+    //   }
+    // }
+  }
 }
-

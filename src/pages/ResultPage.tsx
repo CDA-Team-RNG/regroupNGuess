@@ -1,10 +1,9 @@
 import React from "react";
 import TeamResult from "../layout/TeamResult";
-
 import rogueLogo from "../assets/rogue-rebrand-removebg-2.png";
 import MADLogo from "../assets/Mad-lions-madrid-removebg-2.png";
 import MatchSelected from "../components/MatchSelected";
-import { Navbar } from "../layout/Navbar";
+// import { Navbar } from "../layout/Navbar";
 
 const tempInfo = [
   {
@@ -40,10 +39,13 @@ const data = {
 export const ResultPage = () => {
   return (
     <>
-      <Navbar/>
+      {/* <Navbar/> */}
+      <div className="resultPage">
+
       <MatchSelected data={data}/>
+      <div>
       <section className="team-result">
-        <div>
+        <div className="milieu">
           <h3>Status du match :</h3>
           <p>Terminé</p>
           <p className="score"><span className={tempInfo[0].wonMatch == true ? "match-win" : "match-lost"}>{tempInfo[0].wonRound}</span><span> - </span><span className={tempInfo[1].wonMatch == true ? "match-win" : "match-lost"}>{tempInfo[1].wonRound}</span></p>
@@ -53,16 +55,16 @@ export const ResultPage = () => {
         {tempInfo.map((element, index: number) => {
           return (
             <TeamResult
-              key={index}
-              teamName={element.teamName}
-              pic={element.image}
-              percentage={element.percentage}
-              betpoints={element.betpoints}
-              selected={element.selected}
-              isWon={element.wonMatch}
+            key={index}
+            teamName={element.teamName}
+            pic={element.image}
+            percentage={element.percentage}
+            betpoints={element.betpoints}
+            selected={element.selected}
+            isWon={element.wonMatch}
             />
-          );
-        })}
+            );
+          })}
       </section>
       <section className="gamble-result">
         <p className="gamble-total-pts">Total points pariés : <span>4355</span></p>
@@ -76,6 +78,8 @@ export const ResultPage = () => {
           </div>
         </div>
       </section>
+          </div>
+          </div>
     </>
   );
 };

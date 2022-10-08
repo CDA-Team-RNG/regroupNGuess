@@ -71,3 +71,16 @@
         color: $color-scheme-orange;
     }
 }
+
+@media only screen and (min-width: 768px) {
+    .resultPage{
+        .milieu{
+          /* Création d'une grille à deux colonnes. La première colonne mesure 200 pixels de large et
+          la deuxième colonne est aussi large que nécessaire. */
+            // display: grid;
+            // grid-template-columns: 200px auto;
+        }
+        
+    }
+
+}

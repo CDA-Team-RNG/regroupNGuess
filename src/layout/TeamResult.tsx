@@ -24,7 +24,7 @@ export const TeamResult = (props: TeamResult) => {
           alt=""></img>
       </figure>
 
-      <h2 className="team-result-big-txt">{props.teamName}</h2>
+      <h2 className="team-result-big-txt1">{props.teamName}</h2>
       <p className={`team-result-big-txt ${props.percentage > 50 ? "percentage-sup-50" : "percentage-low-50"}`}>
         {props.percentage}%
       </p>

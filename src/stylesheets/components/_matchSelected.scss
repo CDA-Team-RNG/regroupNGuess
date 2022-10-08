@@ -53,3 +53,22 @@
         }
     }
 }
+
+@media only screen and (min-width: 768px) {
+    .match-selected-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 0.8rem;
+        background-color: #032E3B;
+        margin-top: 5px;
+        padding: 20px;
+    
+    figure {
+        width: 20%;
+        padding-top: 3px;
+    }
+    }
+  
+}

@@ -1,3 +1,17 @@
+.dropDownButton_stats_main-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: $color-scheme-dark-blue;
+}
+
+.move-stat-down {
+  padding-block-end: 100px;
+
+  @media only screen and (min-width: $media-dropdown-desktop-v) {
+    padding-block-end: 120px;
+  }
+}
+
 //  ANIMATIONS ==========================================================================================
 // ======================================================================================================
 

@@ -1,12 +1,14 @@
-.team-result {
-    
-    div {
-        display: flex;
-        color: white;
-        flex-direction: column;
-        align-items: center;
-        font-weight: bold;
+@media only screen and (max-width: 767px) {
+    .team-result2{
+        display: none;
     }
+.team-result {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+
 
     h3 {
         font-size: 16px;
@@ -16,7 +18,7 @@
         font-size: 15px;
         color: $color-scheme-orange;
     }
-         
+
     .score {
         width: 50%;
         display: flex;
@@ -28,7 +30,7 @@
     .match-win {
         color: $color-scheme-orange;
     }
-    
+
     .match-lost {
         color: white;
     }
@@ -71,15 +73,98 @@
         color: $color-scheme-orange;
     }
 }
+}
 
 @media only screen and (min-width: 768px) {
-    .resultPage{
-        .milieu{
-          /* Création d'une grille à deux colonnes. La première colonne mesure 200 pixels de large et
-          la deuxième colonne est aussi large que nécessaire. */
-            // display: grid;
-            // grid-template-columns: 200px auto;
+    .team-result{
+        display: none;
+    }
+
+    .temp-team-result{
+        margin-top: 50px;
+    }
+    .team-result2 {
+        display: flex;
+        color: white;
+        flex-direction: column;
+        align-items: center;
+        font-weight: bold;
+
+        h3 {
+            font-size: 16px;
         }
+
+        .gameStatus_h{
+            margin-top: 15px;
+        }
+
+        .gameStatus_p{
+            font-size: 15px;
+            color: $color-scheme-orange;
+            height: 40px
+        }
+
+        p {
+            font-size: 15px;
+            // color: $color-scheme-orange;
+        }
+
+        .score {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            font-size: 40px;
+            height: 80px
+        }
+
+        .match-win {
+            color: $color-scheme-orange;
+        }
+
+        .match-lost {
+            color: white;
+        }
+    }
+    .gamble-result{
+        display: none;
+    }
+        .gamble-result-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+        
+            .gamble-total-pts {
+                font-size: 18px;
+                padding-bottom: 20px;
+            }
+        
+            .gamble-result-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                font-size: 25px;
+                background-color: $color-scheme-dark-purple;
+                border-radius: 8px;
+                width: 100%;
+                height: 100px;
+        
+                .gamble-upper-result {
+                    display: flex;
+                    justify-content: space-around;
+                }
+        
+                .gamble-lower-result {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        
+            span {
+                color: $color-scheme-orange;
+            }
         
     }
 

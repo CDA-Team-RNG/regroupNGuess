@@ -1,88 +1,90 @@
 @media only screen and (max-width: 767px) {
-    .team-result2{
+    .team-result2 {
         display: none;
     }
-.team-result {
-    display: flex;
-    color: white;
-    flex-direction: column;
-    align-items: center;
-    font-weight: bold;
 
-
-    h3 {
-        font-size: 16px;
-    }
-
-    p {
-        font-size: 15px;
-        color: $color-scheme-orange;
-    }
-
-    .score {
-        width: 50%;
+    .team-result {
         display: flex;
-        justify-content: space-between;
         color: white;
-        font-size: 40px;
+        flex-direction: column;
+        align-items: center;
+        font-weight: bold;
+
+
+        h3 {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 15px;
+            color: $color-scheme-orange;
+        }
+
+        .score {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            font-size: 40px;
+        }
+
+        .match-win {
+            color: $color-scheme-orange;
+        }
+
+        .match-lost {
+            color: white;
+        }
     }
 
-    .match-win {
-        color: $color-scheme-orange;
-    }
-
-    .match-lost {
-        color: white;
-    }
-}
-
-.gamble-result {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    font-size: 20px;
-
-    .gamble-total-pts {
-        font-size: 18px;
-        padding-bottom: 20px;
-    }
-
-    .gamble-result-box {
+    .gamble-result {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        font-size: 25px;
-        background-color: $color-scheme-dark-purple;
-        border-radius: 8px;
-        width: 70%;
-        height: 130px;
+        align-items: center;
+        color: white;
+        font-size: 20px;
 
-        .gamble-upper-result {
+        .gamble-total-pts {
+            font-size: 18px;
+            padding-bottom: 20px;
+        }
+
+        .gamble-result-box {
             display: flex;
+            flex-direction: column;
             justify-content: space-around;
+            font-size: 25px;
+            background-color: $color-scheme-dark-purple;
+            border-radius: 8px;
+            width: 70%;
+            height: 130px;
+
+            .gamble-upper-result {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .gamble-lower-result {
+                display: flex;
+                justify-content: center;
+            }
         }
 
-        .gamble-lower-result {
-            display: flex;
-            justify-content: center;
+        span {
+            color: $color-scheme-orange;
         }
     }
-
-    span {
-        color: $color-scheme-orange;
-    }
-}
 }
 
 @media only screen and (min-width: 768px) {
-    .team-result{
+    .team-result {
         display: none;
     }
 
-    .temp-team-result{
+    .temp-team-result {
         margin-top: 50px;
     }
+
     .team-result2 {
         display: flex;
         color: white;
@@ -94,11 +96,11 @@
             font-size: 16px;
         }
 
-        .gameStatus_h{
+        .gameStatus_h {
             margin-top: 15px;
         }
 
-        .gameStatus_p{
+        .gameStatus_p {
             font-size: 15px;
             color: $color-scheme-orange;
             height: 40px
@@ -106,7 +108,6 @@
 
         p {
             font-size: 15px;
-            // color: $color-scheme-orange;
         }
 
         .score {
@@ -126,46 +127,124 @@
             color: white;
         }
     }
-    .gamble-result{
+
+    .gamble-result {
         display: none;
     }
-        .gamble-result-2 {
+
+    .gamble-result-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+
+        .gamble-total-pts {
+            font-size: 18px;
+            padding-bottom: 20px;
+        }
+
+        .gamble-result-box {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            color: white;
-            font-size: 20px;
-        
-            .gamble-total-pts {
-                font-size: 18px;
-                padding-bottom: 20px;
-            }
-        
-            .gamble-result-box {
+            justify-content: space-around;
+            font-size: 25px;
+            background-color: $color-scheme-dark-purple;
+            border-radius: 8px;
+            width: 100%;
+            height: 100px;
+
+            .gamble-upper-result {
                 display: flex;
-                flex-direction: column;
                 justify-content: space-around;
-                font-size: 25px;
-                background-color: $color-scheme-dark-purple;
-                border-radius: 8px;
-                width: 100%;
-                height: 100px;
-        
-                .gamble-upper-result {
-                    display: flex;
-                    justify-content: space-around;
-                }
-        
-                .gamble-lower-result {
-                    display: flex;
-                    justify-content: center;
-                }
             }
-        
-            span {
-                color: $color-scheme-orange;
+
+            .gamble-lower-result {
+                display: flex;
+                justify-content: center;
             }
-        
+        }
+
+        span {
+            color: $color-scheme-orange;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .team-result2 {
+        h3{
+            font-size: 30px;
+        }
+
+        .gameStatus_h {
+            margin-top: 25px;
+        }
+
+        .gameStatus_p {
+            font-size: 25px;
+            color: $color-scheme-orange;
+            height: 60px
+        }
+
+        p {
+            font-size: 25px;
+        }
+
+        .score {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            font-size: 50px;
+            height: 100px
+        }
+
+        .match-win {
+            color: $color-scheme-orange;
+        }
+
+        .match-lost {
+            color: white;
+        }
     }
 
-}
+    .gamble-result-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        font-size: 30px;
+
+        .gamble-total-pts {
+            font-size: 20px;
+            padding-bottom: 20px;
+        }
+
+        .gamble-result-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 25px;
+            background-color: $color-scheme-dark-purple;
+            border-radius: 8px;
+            width: 120%;
+            height: 200px;
+
+            .gamble-upper-result {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .gamble-lower-result {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        span {
+            color: $color-scheme-orange;
+        }
+    }
+
+    }

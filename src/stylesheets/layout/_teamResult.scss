@@ -108,5 +108,43 @@
       color: rgb(226, 226, 226);
       margin-top: 38px;
     }
+
+    .win-crown {
+      width: 7rem;
+      position: absolute;
+      top: -15%;
+      left: -35%;
+
+      transform: rotate(-40deg);
+      filter: invert(89%) sepia(60%) saturate(4781%) hue-rotate(324deg) brightness(104%) contrast(92%);
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .team-result__container {
+    width: min(30rem, 25%);
+    height: 500px;
+
+    figure:nth-of-type(1) {
+      width: min(10rem, 65%);
+      height: 65%;
+      margin-top: 10px;
+    }
+
+    .team-result-big-txt1 {
+      margin-top: 150px;
+      line-height: 70px;
+    }
+
+    .win-crown {
+      width: 7rem;
+      position: absolute;
+      top: -12%;
+      left: -25%;
+
+      transform: rotate(-40deg);
+      filter: invert(89%) sepia(60%) saturate(4781%) hue-rotate(324deg) brightness(104%) contrast(92%);
+    }
   }
 }

@@ -1,17 +1,13 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .home-main-box {
-        width: 100vw;
-        display: flex;
-        align-items: flex-start;
-        height: calc(100vh - 90px);
-    }
+  .home-main-box {
+    display: grid;
+    grid-template-columns: minmax(210px, 0.2fr) 1fr;
   }
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-  
-  }
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-  
-  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

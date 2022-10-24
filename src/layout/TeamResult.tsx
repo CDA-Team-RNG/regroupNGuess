@@ -18,6 +18,11 @@ export const TeamResult = (props: TeamResult) => {
       className={`team-result__container
       ${props.selected ? "team-result__container-border-picked" : "team-result__container-border-notpicked"}`}>
       <figure>
+      {props.isWon && (
+        <figure className="win-crown">
+          <img src={winCrown} />
+        </figure>
+      )}
         <img
           className="general_img"
           src={props.pic}
@@ -40,11 +45,7 @@ export const TeamResult = (props: TeamResult) => {
       <p className="team-result-medium-txt">Total de ponts pariés :</p>
       <p>{props.betpoints}</p>
 
-      {props.isWon && (
-        <figure className="win-crown">
-          <img src={winCrown} />
-        </figure>
-      )}
+     
     </section>
   );
 };

@@ -54,9 +54,13 @@
   background-color: #393942;
 }
 
-@media only screen and (min-width: $media-768px) {
+
+@media only screen and (min-width: 768px) {
   .sidebar {
     display: block;
+    position: sticky;
+    top: 90px;
+    height: calc(100vh - 90px);
   }
 }
 

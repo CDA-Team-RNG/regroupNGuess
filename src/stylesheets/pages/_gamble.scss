@@ -1,77 +1,78 @@
-.gamblePage{
-    background-color: #032e3b;
-    height: 100%;
+.gamblePage {
+  background-color: #032e3b;
+  // height: 100%;
 }
 
+.gameStatus {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
 
-.gameStatus{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: bold;
-    font-size: 11px;
-}
-
-.timeColor{
+  .timeColor {
     color: #f09e78;
+  }
 }
 
-.logo-team-red-gamble{
-    width: 120px;
-    height: 100px;
+// ===============================================================
+.matchSelected-container {
+  padding-block: 20px;
 }
 
-.logo-team-red-gamble-logo{
+.matchSelected {
+  display: flex;
+  justify-content: space-around;
+  height: 150px;
+
+  position: relative;
+
+  .logo-team-red-gamble {
+    width: 130px;
+  }
+
+  .logo-team-red-gamble-logo {
     width: 100%;
     object-fit: cover;
     filter: drop-shadow(0.313rem 0.313rem 0.063rem rgba(0, 0, 0, 0.372));
-}
+  }
 
-.logo-team-red-gamble-logoFNC{
+  .logo-team-red-gamble-logoFNC {
     width: 100%;
     object-fit: cover;
     filter: drop-shadow(0.313rem 0.313rem 0.063rem rgba(0, 0, 0, 0.372));
     margin-top: 30px;
+  }
 
+  .VsGamble-figure {
+    width: 20vw;
+    min-width: 7rem;
+    @media only screen and (min-width: 700px) {
+      width: 15vw;
+      min-width: 10rem;
+    }
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 80%;
+
+    .imgVsGamble {
+      width: 100%;
+    }
+  }
 }
 
-.matchSelected{
-    display: flex;
-    justify-content: center;
-    height: 150px;
-    padding-top: 20px;
-    
-}
+// ===============================================================
 
-.imgVsGamble{
-    width: 100px;
-    height: 100px;
-    margin-top: 40px;
-    margin-right: 10px;
-    margin-left: 10px;
-}
+.teamStatsComponent {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
 
-.dropDownComponent{
-    margin-top: 30px;
-}
-
-.teamStatsComponent{
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-around;
-  
-}
-
-.teamStatsComponent1{
-    margin-right: 39px
-}
-
-.teamStatsComponent2{
-    margin-right: 37px
-}
-
-.stats{
+  .stats {
     color: white;
     margin-left: 25px;
+  }
 }

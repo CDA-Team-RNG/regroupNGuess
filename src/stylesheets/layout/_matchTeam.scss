@@ -1,142 +1,139 @@
-.matchTeamPName{
+.matchTeamPName {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 0.625rem;
+}
+
+.matchTeamLogo {
+  width: 100%;
+  object-fit: cover;
+  filter: drop-shadow(0.313rem 0.313rem 0.063rem rgba(0, 0, 0, 0.372));
+}
+
+.matchTeamLogoDiv {
+  width: 60px;
+  height: 70px;
+}
+
+.matcheteamContainer {
+  display: flex;
+  margin-top: 0.625rem;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.matcheteamContainer2 {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 0.625rem;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.matchTeamNameOdds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.matchTeamNameOdds2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.matchTeamPName2 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 10px;
+}
+
+.matchTeamLine {
+  width: 35px;
+  border: 1px inset rgb(237, 50, 50);
+}
+
+.matchTeamLine2 {
+  width: 35px;
+  border: 1px inset rgb(33, 130, 218);
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: $media-768px) {
+  .matchTeamPName {
     color: white;
     font-size: 1.25rem;
     font-weight: bold;
     line-height: 0.625rem;
-}
+  }
 
-.matchTeamLogo{
+  .matchTeamLogo {
     width: 100%;
     object-fit: cover;
     filter: drop-shadow(0.313rem 0.313rem 0.063rem rgba(0, 0, 0, 0.372));
-}
+  }
 
-.matchTeamLogoDiv{
-    width: 60px;
-    height: 70px;
-}
+  .matchTeamLogoDiv {
+    width: 75px;
+  }
 
-.matcheteamContainer{
+  .matcheteamContainer {
     display: flex;
     margin-top: 0.625rem;
     gap: 1.25rem;
     align-items: center;
-}
+  }
 
-.matcheteamContainer2{
+  .matcheteamContainer2 {
     display: flex;
     flex-direction: row-reverse;
     margin-top: 0.625rem;
     gap: 1.25rem;
     align-items: center;
-}
+  }
 
-.matchTeamNameOdds{
+  .matchTeamNameOdds {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
-}
+    height: 100%;
+  }
 
-.matchTeamNameOdds2{
+  .matchTeamNameOdds2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
-}
+    height: 100%;
+  }
 
-.matchTeamPName2{
+  .matchTeamPName2 {
     color: white;
     font-size: 20px;
     font-weight: bold;
     line-height: 10px;
-}
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 
-.matchTeamLine{
+  .matchTeamLine {
     width: 35px;
     border: 1px inset rgb(237, 50, 50);
-}
+    margin-bottom: 10px;
+  }
 
-.matchTeamLine2{
+  .matchTeamLine2 {
     width: 35px;
     border: 1px inset rgb(33, 130, 218);
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .matchTeamPName{
-        color: white;
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 0.625rem;
-    }
-    
-    .matchTeamLogo{
-        width: 100%;
-        object-fit: cover;
-        filter: drop-shadow(0.313rem 0.313rem 0.063rem rgba(0, 0, 0, 0.372));
-    }
-    
-    .matchTeamLogoDiv{
-        width: 75px;
-    }
-    
-    .matcheteamContainer{
-        display: flex;
-        margin-top: 0.625rem;
-        gap: 1.25rem;
-        align-items: center;
-    }
-    
-    .matcheteamContainer2{
-        display: flex;
-        flex-direction: row-reverse;
-        margin-top: 0.625rem;
-        gap: 1.25rem;
-        align-items: center;
-    }
-    
-    .matchTeamNameOdds{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-    }
-    
-    .matchTeamNameOdds2{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-    }
-    
-    .matchTeamPName2{
-        color: white;
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 10px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    
-    .matchTeamLine{
-        width: 35px;
-        border: 1px inset rgb(237, 50, 50);
-        margin-bottom: 10px;
-    }
-    
-    .matchTeamLine2{
-        width: 35px;
-        border: 1px inset rgb(33, 130, 218);
-        margin-bottom: 10px;
-    }
+    margin-bottom: 10px;
+  }
 }
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
+@media only screen and (min-width: $media-992px) {
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
+@media only screen and (min-width: $media-1200px) {
 }
-

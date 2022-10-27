@@ -1,4 +1,4 @@
-import React, {ButtonHTMLAttributes, useState} from "react";
+import React, {ButtonHTMLAttributes, useEffect, useState} from "react";
 
 import {DropDownButton} from "./DropDownButton";
 
@@ -61,11 +61,14 @@ export const DropDownButtonContainer = () => {
     }
   };
 
+  /* ${left.panel || right.panel ? "move-stat-down" : ""} */
+
   // ==================================================================
   // ==================================================================
   return (
     <>
-      <div className="temp-page">
+      {/* add padding-block-end when a panel is open to not have the panl cover the stats */}
+      <section className={`dropDownButton_stats_main-container  ${left.panel || right.panel ? "move-stat-down" : ""}`}>
         <DropDownButton
           teamName="Rogue"
           side={"left"}
@@ -75,6 +78,7 @@ export const DropDownButtonContainer = () => {
           isDisabled={left.btnDisabled}
           odds={1.56}
         />
+
         <DropDownButton
           teamName="MAD Lions"
           side={"right"}
@@ -84,7 +88,7 @@ export const DropDownButtonContainer = () => {
           isDisabled={right.btnDisabled}
           odds={2.01}
         />
-      </div>
+      </section>
     </>
   );
 };

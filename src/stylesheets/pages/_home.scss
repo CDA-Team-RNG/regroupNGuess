@@ -1,9 +1,3 @@
-.temp-page {
-  display: flex;
-  justify-content: space-around;
-  background-color: $color-scheme-dark-blue;
-}
-
 .home_container {
   display: flex;
   align-items: center;
@@ -22,17 +16,14 @@
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: $media-768px) {
   .home_container {
     display: none;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
+@media only screen and (min-width: $media-992px) {
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
+@media only screen and (min-width: $media-1200px) {
 }
-

@@ -1,9 +1,7 @@
 .sidebar {
   display: none;
-  position: sticky;
+  display: none;
   background-color: #1c1c22;
-  width: 350px;
-  height: calc(100vh - 90px);
   color: white;
   font-weight: bolder;
 }
@@ -53,7 +51,6 @@
 .selected {
   background-color: #393942;
 }
-
 
 @media only screen and (min-width: 768px) {
   .sidebar {

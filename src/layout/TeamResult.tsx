@@ -18,13 +18,18 @@ export const TeamResult = (props: TeamResult) => {
       className={`team-result__container
       ${props.selected ? "team-result__container-border-picked" : "team-result__container-border-notpicked"}`}>
       <figure>
+      {props.isWon && (
+        <figure className="win-crown">
+          <img src={winCrown} />
+        </figure>
+      )}
         <img
           className="general_img"
           src={props.pic}
           alt=""></img>
       </figure>
 
-      <h2 className="team-result-big-txt">{props.teamName}</h2>
+      <h2 className="team-result-big-txt1">{props.teamName}</h2>
       <p className={`team-result-big-txt ${props.percentage > 50 ? "percentage-sup-50" : "percentage-low-50"}`}>
         {props.percentage}%
       </p>
@@ -40,11 +45,7 @@ export const TeamResult = (props: TeamResult) => {
       <p className="team-result-medium-txt">Total de ponts pariés :</p>
       <p>{props.betpoints}</p>
 
-      {props.isWon && (
-        <figure className="win-crown">
-          <img src={winCrown} />
-        </figure>
-      )}
+     
     </section>
   );
 };

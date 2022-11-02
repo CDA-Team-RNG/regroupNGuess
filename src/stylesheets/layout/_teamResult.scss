@@ -42,8 +42,6 @@
 
   figure:nth-of-type(1) {
     width: min(10rem, 65%);
-    height: 65%;
-
     img {
       filter: drop-shadow(10px 5px 5px rgba(0, 0, 0, 0.738));
     }
@@ -92,60 +90,56 @@
   filter: invert(89%) sepia(60%) saturate(4781%) hue-rotate(324deg) brightness(104%) contrast(92%);
 }
 
-@media only screen and (min-width: 768px) {
-  .team-result__container {
-    width: min(30rem, 25%);
-    height: 321px;
+// @media only screen and (min-width: 1000px) {
+//   .team-result__container {
+//     width: min(30rem, 25%);
+//     height: 321px;
 
-    figure:nth-of-type(1) {
-      width: min(5rem, 65%);
-      height: 65%;
-    }
+//     figure:nth-of-type(1) {
+//       width: min(5rem, 65%);
+//     }
 
-    .team-result-big-txt1 {
-      font-size: 1.4rem;
-      font-weight: bolder;
-      color: rgb(226, 226, 226);
-      margin-top: 38px;
-    }
+//     .team-result-big-txt1 {
+//       font-size: 1.4rem;
+//       font-weight: bolder;
+//       color: rgb(226, 226, 226);
+//     }
 
-    .win-crown {
-      width: 7rem;
-      position: absolute;
-      top: -10%;
-      left: -18px;;
-      z-index: 1;
+//     .win-crown {
+//       width: 7rem;
+//       position: absolute;
+//       top: -10%;
+//       left: -18px;
+//       z-index: 1;
 
-      transform: rotate(-40deg);
-      filter: invert(89%) sepia(60%) saturate(4781%) hue-rotate(324deg) brightness(104%) contrast(92%);
-    }
-  }
-}
+//       transform: rotate(-40deg);
+//       filter: invert(89%) sepia(60%) saturate(4781%) hue-rotate(324deg) brightness(104%) contrast(92%);
+//     }
+//   }
+// }
 
-@media only screen and (min-width: 1200px) {
-  .team-result__container {
-    width: min(30rem, 25%);
-    height: 500px;
+// @media only screen and (min-width: 1200px) {
+//   .team-result__container {
+//     width: min(30rem, 25%);
+//     height: 500px;
 
-    figure:nth-of-type(1) {
-      width: min(10rem, 65%);
-      height: 65%;
-      margin-top: 10px;
-    }
+//     figure:nth-of-type(1) {
+//       width: min(10rem, 65%);
+//       margin-top: 10px;
+//     }
 
-    .team-result-big-txt1 {
-      margin-top: 150px;
-      line-height: 70px;
-    }
+//     .team-result-big-txt1 {
+//       line-height: 70px;
+//     }
 
-    .win-crown {
-      width: 7rem;
-      position: absolute;
-      top: -12%;
-      left: -25%;
+//     .win-crown {
+//       width: 7rem;
+//       position: absolute;
+//       top: -12%;
+//       left: -25%;
 
-      transform: rotate(-40deg);
-      filter: invert(89%) sepia(60%) saturate(4781%) hue-rotate(324deg) brightness(104%) contrast(92%);
-    }
-  }
-}
+//       transform: rotate(-40deg);
+//       filter: invert(89%) sepia(60%) saturate(4781%) hue-rotate(324deg) brightness(104%) contrast(92%);
+//     }
+//   }
+// }

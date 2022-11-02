@@ -49,75 +49,73 @@
       font-weight: bold;
       font-style: italic;
     }
+  }
 
-}
-
-@media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     .match-selected-card {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: stretch;
-        gap: 0.8rem;
-        background-color: #032E3B;
-        margin-top: 5px;
-        padding: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: stretch;
+      gap: 0.8rem;
+      background-color: #032e3b;
+      margin-top: 5px;
+      padding: 20px;
 
-        figure {
-            width: 20%;
-            padding-top: 3px;
-        }
+      figure {
+        width: 20%;
+        padding-top: 3px;
+      }
     }
-}
+  }
 
-@media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1200px) {
     .match-selected-card {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: stretch;
-        gap: 0.8rem;
-        background-color: #032E3B;
-        margin-top: 5px;
-        padding: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: stretch;
+      gap: 0.8rem;
+      background-color: #032e3b;
+      margin-top: 5px;
+      padding: 30px;
 
-        figure {
-            width: 17%;
-            padding-top: 3px;
+      figure {
+        width: 17%;
+        padding-top: 3px;
+      }
+      .game {
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 4px;
+      }
+
+      .league {
+        font-weight: bold;
+        color: white;
+        margin-bottom: 4px;
+        font-size: 15px;
+      }
+
+      .date {
+        color: #b3c0c4;
+        margin-bottom: 4px;
+        font-size: 15px;
+      }
+
+      .versus {
+        color: white;
+        font-weight: bold;
+        margin-bottom: 4px;
+        font-size: 15px;
+
+        span {
+          color: #f09e78;
+          font-weight: bold;
+          font-style: italic;
         }
-        .game {
-            font-size: 20px;
-            font-weight: bold;
-            color: white;
-            margin-bottom: 4px;
-            
-        }
-    
-        .league {
-            font-weight: bold;
-            color: white;
-            margin-bottom: 4px;
-            font-size: 15px;
-        }
-    
-        .date {
-            color: #b3c0c4;
-            margin-bottom: 4px;
-            font-size: 15px;
-        }
-    
-        .versus {
-            color: white;
-            font-weight: bold;
-            margin-bottom: 4px;
-            font-size: 15px;
-    
-            span {
-                color: #F09E78;
-                font-weight: bold;
-                font-style: italic;
-            }
-        }
+      }
     }
+  }
 }
-

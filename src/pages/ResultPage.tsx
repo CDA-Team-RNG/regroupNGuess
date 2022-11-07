@@ -58,6 +58,8 @@ export const ResultPage = () => {
                 {index == 1 && (
                   <>
                     <section className="team-result2">
+                      <div>
+
                       <h3 className="gameStatus_h">Status du match :</h3>
                       <p className="gameStatus_p">Terminé</p>
                       <p className="score">
@@ -69,6 +71,7 @@ export const ResultPage = () => {
                           {tempInfo[1].wonRound}
                         </span>
                       </p>
+                      </div>
 
                       <section className="gamble-result-2">
                         <p className="gamble-total-pts">
